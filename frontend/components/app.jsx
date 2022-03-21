@@ -11,6 +11,7 @@ import MenuShow from "./menu_show";
 import AccountShowContainer from "./account/account_show_container";
 import LoginFormContainer from "../components/account/login_form_container";
 import SignupFormContainer from "../components/account/signup_form_container";
+import Footer from "./footer";
 
 const App = () => (
   <div>
@@ -27,6 +28,7 @@ const App = () => (
       <Route exact path="/" component={HomePage} />
       <Redirect to="/" />
     </Switch>
+    <Footer />
   </div>
 );
 

@@ -1,7 +1,15 @@
 import React from "react";
 
-const Account = () => (
-  <div>Account</div>
-);
+class AccountShow extends React.Component {
+  constructor(props) {
+    super(props);
+  }
 
-export default Account;
+  render() {
+    return (
+      <button onClick={this.props.logout}>Log Out</button>
+    )
+  }
+}
+
+export default AccountShow;

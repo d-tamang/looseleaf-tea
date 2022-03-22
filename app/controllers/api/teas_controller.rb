@@ -1,6 +1,4 @@
 class Api::TeasController < ApplicationController
-  def
-  end
 
   private
 

@@ -1,7 +1,7 @@
 import React from "react";
 
 const MenuShow = () => (
-  <div>
+  <div className="menu">
     <p>Parties of 6 or more $40 pp for afternoon tea service.</p>
     <p>TEA LUNCH</p>
     <p>Choice of (1) sandwich, house salad, (1) scone or tea cookie and a pot of tea</p>

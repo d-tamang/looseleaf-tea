@@ -6,6 +6,7 @@ class SignupForm extends React.Component {
     super(props);
     this.state = this.props.user;
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.clearErrors = this.clearErrors.bind(this);
   }
 
   update(field) {
@@ -14,11 +15,12 @@ class SignupForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    this.props.clearErrors();
     this.props.signup(this.state);
   }
 
   renderErrors() {
-    return(
+    return (
       <div>
         {this.props.errors.map((error, i) => (
           <p key={i}>{error}</p>
@@ -27,31 +29,31 @@ class SignupForm extends React.Component {
     );
   }
 
+  clearErrors() {
+    this.props.clearErrors();
+  }
+
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label>First Name
-          <input type="text" value={this.state.first_name} onChange={this.update('first_name')}></input>
-        </label>
-        <br />
-        <label>Last Name
-          <input type="text" value={this.state.last_name} onChange={this.update('last_name')}></input>
-        </label>
-        <br />
-        <label>Email*
-          <input type="text" value={this.state.email} onChange={this.update('email')}></input>
-        </label>
-        <br />
-        <label>Password*
-          <input type="password" value={this.state.password} onChange={this.update('password')}></input>
-        </label>
-        <br />
-        <button>Register</button>
-        {this.renderErrors()}
-        <p>*Required Fields</p>
-        <p>Already have an account?</p>
-        <Link to="/account/login">Sign In</Link>
-      </form>
+      <div className="session-form">
+        <div>
+          <form className="signup-form" onSubmit={this.handleSubmit}>
+            <input type="text" value={this.state.first_name} onChange={this.update('first_name')} placeholder="First Name"></input>
+            <br />
+            <input type="text" value={this.state.last_name} onChange={this.update('last_name')} placeholder="Last Name"></input>
+            <br />
+            <input type="text" value={this.state.email} onChange={this.update('email')} placeholder="Email*"></input>
+            <br />
+            <input type="password" value={this.state.password} onChange={this.update('password')} placeholder="Password*"></input>
+            <br />
+            <button id="session-button">REGISTER</button>
+          </form>
+        </div>
+        <div id="session-text">*Required Fields</div>
+        <div className="session-errors">{this.renderErrors()}</div>
+        <div className="session-question">Already have an account?</div>
+        <div><Link to="/account/login" onClick={this.clearErrors}>Sign In</Link></div>
+      </div>
     )
   }
 }

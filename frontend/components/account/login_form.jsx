@@ -6,6 +6,8 @@ class LoginForm extends React.Component {
     super(props);
     this.state = this.props.user;
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demoLogin = this.demoLogin.bind(this);
+    this.clearErrors = this.clearErrors.bind(this);
   }
 
   update(field) {
@@ -14,11 +16,12 @@ class LoginForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    this.props.clearErrors();
     this.props.login(this.state);
   }
 
   renderErrors() {
-    return(
+    return (
       <div>
         {this.props.errors.map((error, i) => (
           <p key={i}>{error}</p>
@@ -27,22 +30,32 @@ class LoginForm extends React.Component {
     );
   }
 
+  clearErrors() {
+    this.props.clearErrors();
+  }
+
+  demoLogin(e) {
+    e.preventDefault();
+    this.props.login({ first_name: "Demo", last_name: "User", email: "demouser@demo.com", password: "password" })
+  }
+
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label>Email
-          <input type="text" value={this.state.email} onChange={this.update("email")}></input>
-        </label>
-        <br />
-        <label>Password
-          <input type="password" value={this.state.password} onChange={this.update("password")}></input>
-        </label>
-        <br />
-        <button>Sign In</button>
-        {this.renderErrors()}
-        <p>Don't have an account?</p>
-        <Link to="/account/register">Create Account</Link>
-      </form>
+      <div className="session-form">
+        <div>
+          <form className="login-form" onSubmit={this.handleSubmit}>
+            <input type="text" value={this.state.email} onChange={this.update("email")} placeholder="Email"></input>
+            <br />
+            <input type="password" value={this.state.password} onChange={this.update("password")} placeholder="Password"></input>
+            <br />
+            <button id="session-button">SIGN IN</button>
+          </form>
+        </div>
+        <div><button id="demo-button" onClick={this.demoLogin}>DEMO LOGIN</button></div>
+        <div className="session-errors">{this.renderErrors()}</div>
+        <div className="session-question">Don't have an account?</div>
+        <div><Link to="/account/register" onClick={this.clearErrors}>Create Account</Link></div>
+      </div>
     )
   }
 }

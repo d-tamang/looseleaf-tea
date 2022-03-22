@@ -14,7 +14,7 @@ import SignupFormContainer from "../components/account/signup_form_container";
 import Footer from "./footer";
 
 const App = () => (
-  <div>
+  <div className="app">
     <HeaderContainer />
     <Switch>
       <Route exact path="/teas/black" component={BlackTeasIndex} />

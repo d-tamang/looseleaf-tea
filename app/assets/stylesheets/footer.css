@@ -1,0 +1,42 @@
+.footer {
+  background-color: rgb(240, 240, 240);
+}
+
+.contact-info {
+  text-align: center;
+  padding: 50px;
+}
+
+.contact-info > p {
+  padding: 15px;
+}
+
+.contact-info > h2 {
+  font-size: 30px;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+
+.my-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+#gh-icon {
+  width: 60px;
+  height: 60px;
+  padding-left: 5px;
+}
+
+#li-icon {
+  width: 60px;
+  height: 60px;
+  padding-right: 5px;
+}
+
+#created-by {
+  font-size: 20px;
+  padding-bottom: 10px;
+}

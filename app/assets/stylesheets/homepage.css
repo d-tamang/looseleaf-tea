@@ -1,11 +1,16 @@
 @font-face {
-  font-family: "Roboto";
-  src: url("RobotoCondensed-Light.ttf");
+  font-family: "Inter-ExtraLight";
+  src: url("Inter-ExtraLight.ttf");
+}
+
+@font-face {
+  font-family: "Inter-Regular";
+  src: url("Inter-Regular.ttf");
 }
 
 .app {
   background-color: white;
-  font-family: "Roboto";
+  font-family: "Inter-ExtraLight";
 }
 
 a {
@@ -20,4 +25,14 @@ a:hover {
 
 button:hover {
   cursor: pointer;
+  opacity: 0.8;
+}
+
+img:hover {
+  cursor: pointer;
+}
+
+/* temp */
+.homepage {
+  margin-top: 100px;
 }

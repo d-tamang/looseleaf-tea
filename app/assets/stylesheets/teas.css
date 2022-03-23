@@ -1,0 +1,30 @@
+.teas-index-container {
+  margin-top: 75px;
+  padding: 25px;
+}
+
+.teas-index-container > p {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: gray;
+}
+
+.teas-index-grid {
+  padding-top: 25px;
+  padding-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 50px;
+  text-align: center;
+}
+
+.teas-index-img {
+  width: 250px;
+  height: 250px;
+}
+
+.teas-index-name {
+  font-size: 20px;
+  padding-top: 10px;
+}

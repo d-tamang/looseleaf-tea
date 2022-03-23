@@ -8,7 +8,7 @@ const Footer = () => (
       <p>Feel free to give us a ring at (650) 558-8515</p>
       <p>Or visit us in person at 1223 Donnelly Ave, Burlingame, CA 94010</p>
     </div>
-    <div class="my-links">
+    <div className="my-links">
       <div id="created-by">Inspired by Leland Tea, created by Disnee</div>
       <div className="link-icons">
         <a href="https://linkedin.com/in/disneetamang"><img id="li-icon" src="images/linkedinicon.png" /></a>

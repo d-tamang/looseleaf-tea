@@ -1,9 +1,12 @@
 class Api::TeasController < ApplicationController
+  def index
+    @teas = Tea.all
+    render :index
+  end
 
-  private
-
-  def tea_params
-    params.require(:tea).permit(:id, :name, :category, :description, :price, :size)
+  def show
+    @tea = Tea.find_by(id: params[:id])
+    render :show
   end
 
 end

@@ -19,9 +19,12 @@
 
 .my-links {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  text-align: center;
+  align-items: center;
+  color: white;
+  background-color: rgb(155, 155, 155);
+  padding: 15px;
 }
 
 #gh-icon {
@@ -33,10 +36,9 @@
 #li-icon {
   width: 60px;
   height: 60px;
-  padding-right: 5px;
 }
 
 #created-by {
   font-size: 20px;
-  padding-bottom: 10px;
+  padding-right: 15px;
 }

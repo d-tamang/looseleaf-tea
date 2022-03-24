@@ -45,7 +45,7 @@
 .tea-show-right {
   background-color: rgb(245, 245, 245);
   width: 500px;
-  height: 70%;
+  height: 100%;
   margin-top: 20px;
 }
 
@@ -67,13 +67,25 @@
   line-height: 1.5;
 }
 
+#select-a-size {
+  width: 100%;
+  border-radius: 12px;
+  padding: 15px 15px;
+  background-color: rgb(175, 175, 175);
+  color: white;
+  margin-bottom: 8px;
+  border-style: hidden;
+  pointer-events: none;
+}
+
 #add-to-cart {
   width: 100%;
   border-radius: 12px;
-  padding: 12px 12px;
+  padding: 15px 15px;
   background-color: #835836;
   color: white;
   margin-bottom: 8px;
+  border-style: hidden;
 }
 
 #tea-show-name {

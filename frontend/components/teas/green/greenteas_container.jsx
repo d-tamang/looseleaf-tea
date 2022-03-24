@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import GreenTeasIndex from './greenteas_index';
 import { fetchTeas } from '../../../actions/tea_actions';
+import GreenTeasIndex from './greenteas_index';
 
 const mapStateToProps = state => {
   return {

@@ -9,8 +9,9 @@
 }
 
 .app {
-  background-color: white;
+  background-color: #fff;
   font-family: "Inter-ExtraLight";
+  color: #333;
 }
 
 a {
@@ -19,17 +20,13 @@ a {
 }
 
 a:hover {
-  color: gray;
+  color: rgb(160, 160, 160);
   cursor: pointer;
 }
 
 button:hover {
   cursor: pointer;
-  opacity: 0.8;
-}
-
-img:hover {
-  cursor: pointer;
+  opacity: 0.7;
 }
 
 /* temp */

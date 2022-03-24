@@ -1,5 +1,5 @@
 import React from "react";
-import HerbalTeaItem from "./herbaltea_item"
+import TeaItem from "../tea_item"
 
 class HerbalTeasIndex extends React.Component {
   constructor(props) {
@@ -18,7 +18,7 @@ class HerbalTeasIndex extends React.Component {
       }
     }
     const herbalTeaItems = herbalTeas.map(tea => (
-      <HerbalTeaItem key={tea.id} tea={tea} />
+      <TeaItem key={tea.id} tea={tea} />
     ));
 
     return (

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-class BlackTeaItem extends React.Component {
+class TeaItem extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -9,11 +9,11 @@ class BlackTeaItem extends React.Component {
   render() {
     return (
       <div>
-        <Link to="/"><img className="teas-index-img" src={this.props.tea.photoUrl} /></Link>
+        <Link to={`/teas/${this.props.tea.id}`}><img className="teas-index-img" src={this.props.tea.photoUrl} /></Link>
         <p className="teas-index-name">{this.props.tea.name}</p>
       </div>
     )
   }
 }
 
-export default BlackTeaItem;
+export default TeaItem;

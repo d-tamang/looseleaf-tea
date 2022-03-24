@@ -8,10 +8,18 @@
 }
 
 .menu div {
-  font-weight: bold;
+  font-family: "Inter-Regular";
   color: rgb(173, 159, 121);
 }
 
 .menu p {
   padding: 5px;
+}
+
+#menu-title {
+  font-family: "Inter-Regular";
+  font-weight: bold;
+  font-size: 25px;
+  padding-top: 20px;
+  padding-bottom: 40px;
 }

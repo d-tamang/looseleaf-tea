@@ -1,5 +1,5 @@
 import React from "react";
-import TeaItem from "./tea_item";
+import TeaItem from "../tea_item";
 
 class TeasIndex extends React.Component {
   constructor(props) {

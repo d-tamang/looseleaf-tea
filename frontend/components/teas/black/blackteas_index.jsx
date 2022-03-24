@@ -1,5 +1,5 @@
 import React from "react";
-import BlackTeaItem from "./blacktea_item"
+import TeaItem from "../tea_item"
 
 class BlackTeasIndex extends React.Component {
   constructor(props) {
@@ -18,7 +18,7 @@ class BlackTeasIndex extends React.Component {
       }
     }
     const blackTeaItems = blackTeas.map(tea => (
-      <BlackTeaItem key={tea.id} tea={tea} />
+      <TeaItem key={tea.id} tea={tea} />
     ));
 
     return (

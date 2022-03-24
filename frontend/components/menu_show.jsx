@@ -2,6 +2,7 @@ import React from "react";
 
 const MenuShow = () => (
   <div className="menu">
+    <div id="menu-title">Afternoon Tea Service Menu</div>
     <div>TEA LUNCH</div>
     <p>Choice of (1) sandwich, house salad, (1) scone or tea cookie and a pot of tea</p>
     <p>$19</p>

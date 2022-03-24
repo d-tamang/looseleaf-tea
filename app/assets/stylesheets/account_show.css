@@ -9,6 +9,10 @@
   align-items: center;
 }
 
+.account-title {
+  font-family: "Inter-Regular";
+}
+
 #account-header {
   padding: 30px;
   font-size: 40px;
@@ -21,6 +25,6 @@
   width: 130px;
   border-radius: 12px;
   padding: 12px 12px;
-  background-color: black;
+  background-color: #333;
   color: white;
 }

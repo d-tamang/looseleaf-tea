@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import TeasIndex from './teas_index';
 import { fetchTeas, fetchTea } from '../../../actions/tea_actions';
+import TeasIndex from './teas_index';
 
 const mapStateToProps = state => {
   return {
@@ -10,8 +10,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchTeas: () => dispatch(fetchTeas()),
-    fetchTea: teaId => dispatch(fetchTea(teaId))
+    fetchTeas: () => dispatch(fetchTeas())
   }
 };
 

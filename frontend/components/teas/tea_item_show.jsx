@@ -10,8 +10,6 @@ class TeaItemShow extends React.Component {
       price: 0,
       size: ""
     }
-    this.setSize = this.setSize.bind(this);
-    this.showPrice = this.showPrice.bind(this);
   }
 
   componentDidMount() {
@@ -47,8 +45,14 @@ class TeaItemShow extends React.Component {
     if (this.state.price === 0) {
       return <button id="select-a-size">SELECT A SIZE</button>
     } else {
-      return <button id="add-to-cart">ADD TO CART</button>
+      return <button onClick={(e) => this.addToCart(e)} id="add-to-cart">ADD TO CART</button>
     }
+  }
+
+  addToCart(e) {
+    e.preventDefault();
+    this.props.createCartItem(this.props.currentUser.id, this.props.tea.id);
+    document.getElementById("nav-cart-id").style.width = "40%";
   }
 
   render() {
@@ -69,7 +73,6 @@ class TeaItemShow extends React.Component {
               <button className="size-button" onClick={() => this.setSize('Large')}>Large</button>
             </div>
             <br />
-            {/* <div><button id="add-to-cart">ADD TO CART</button></div> */}
             <div>{this.showButton()}</div>
             <div id="tea-description">{this.props.tea.description}</div>
           </div>

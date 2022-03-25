@@ -24,6 +24,10 @@
   height: 250px;
 }
 
+.teas-index-img:hover {
+  box-shadow: 4px 4px 10px 8px rgb(202, 202, 202);
+}
+
 .teas-index-name {
   font-size: 20px;
   padding-top: 10px;
@@ -86,6 +90,12 @@
   color: white;
   margin-bottom: 8px;
   border-style: hidden;
+}
+
+#add-to-cart:hover {
+  background-color: #8f7059;
+  opacity: inherit;
+  cursor: pointer;
 }
 
 #tea-show-name {

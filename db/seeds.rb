@@ -10,8 +10,8 @@ require 'open-uri'
 
 User.destroy_all
 Tea.destroy_all
+CartItem.destroy_all
 # Review.destroy_all
-# Cart.destroy_all
 
 demo_user = User.create!(
   first_name: "Demo",

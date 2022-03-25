@@ -5,7 +5,7 @@ class CartItem < ApplicationRecord
     class_name: :User,
     foreign_key: :user_id
 
-  belongs_to: :tea,
+  belongs_to :tea,
     class_name: :Tea,
     foreign_key: :tea_id
 end

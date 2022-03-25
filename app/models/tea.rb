@@ -3,4 +3,8 @@ class Tea < ApplicationRecord
   validates :name, uniqueness: true
   
   has_one_attached :photo
+
+  has_many :cart_items,
+    class_name: :CartItem,
+    foreign_key: :tea_id
 end

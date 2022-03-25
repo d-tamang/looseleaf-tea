@@ -1,9 +1,19 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import CartItemContainer from "../cart_items/cart_item_container";
 
 class Header extends React.Component {
   constructor(props) {
     super(props);
+  }
+
+  openCart() {
+    document.getElementById("nav-cart-id").style.width = "40%";
+  }
+
+  closeCart(e) {
+    e.preventDefault();
+    document.getElementById("nav-cart-id").style.width = "0";
   }
 
   render() {
@@ -26,7 +36,11 @@ class Header extends React.Component {
         </div>
         <div className="right-nav">
           <div>{accountLink}</div>
-          <div><img id="cart-img" src="images/cart.png" />Cart</div>
+          <div className="nav-link" onClick={this.openCart}><img id="cart-img" src="images/cart.png" />Cart</div>
+        </div>
+        <div className="nav-cart" id="nav-cart-id">
+          <button onClick={this.closeCart}>X</button>
+          <CartItemContainer />
         </div>
       </header>
     )

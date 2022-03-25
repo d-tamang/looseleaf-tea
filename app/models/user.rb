@@ -5,6 +5,10 @@ class User < ApplicationRecord
 
   after_initialize :ensure_session_token
 
+  has_many :cart_items,
+    class_name: :CartItem,
+    foreign_key: :user_id
+
   attr_reader :password
 
   def self.find_by_credentials(email, password)

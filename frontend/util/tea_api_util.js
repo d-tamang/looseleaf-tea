@@ -5,9 +5,9 @@ export const fetchTeas = () => {
   })
 };
 
-export const fetchTea = (TeaId) => {
+export const fetchTea = (teaId) => {
   return $.ajax({
       method: "GET",
-      url: `/api/teas/${TeaId}`
+      url: `/api/teas/${teaId}`
   })
 };

@@ -3,6 +3,8 @@ class CreateCartItems < ActiveRecord::Migration[5.2]
     create_table :cart_items do |t|
       t.integer :user_id, null: false
       t.integer :tea_id, null: false
+      t.integer :price, null: false
+      t.string :size, null: false
 
       t.timestamps
     end

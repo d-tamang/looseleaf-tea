@@ -18,7 +18,7 @@ class AccountShow extends React.Component {
           <div>
             <div className="account-title">Account Details</div>
             <br />
-            <div>{this.props.currentUser.first_name} {this.props.currentUser.last_name}</div>
+            <div>{this.props.currentUser.firstName} {this.props.currentUser.lastName}</div>
             <button id="logout-button" onClick={this.props.logout}>LOG OUT</button>
           </div>
         </div>

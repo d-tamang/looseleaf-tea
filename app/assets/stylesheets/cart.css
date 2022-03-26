@@ -1,0 +1,27 @@
+.nav-cart {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  transition: 0.5s;
+  border-left: 1px solid #333;
+}
+
+#cart-img {
+  width: 15px;
+  height: 15px;
+  padding-right: 8px;
+}
+
+#cart-tea-image {
+  width: 250px;
+  height: 250px;
+}
+
+#hidden-subtotal {
+  display: none;
+}

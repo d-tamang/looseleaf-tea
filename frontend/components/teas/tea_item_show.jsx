@@ -13,6 +13,7 @@ class TeaItemShow extends React.Component {
   }
 
   componentDidMount() {
+    window.scrollTo(0, 0)
     this.props.fetchTea(this.props.match.params.teaId);
   }
 
@@ -51,8 +52,8 @@ class TeaItemShow extends React.Component {
 
   addToCart(e) {
     e.preventDefault();
-    this.props.createCartItem(this.props.currentUser.id, this.props.tea.id);
-    document.getElementById("nav-cart-id").style.width = "40%";
+    this.props.createCartItem(this.props.currentUser.id, this.props.tea.id, this.state.price, this.state.size);
+    document.getElementById("nav-cart-id").style.width = "50%";
   }
 
   render() {

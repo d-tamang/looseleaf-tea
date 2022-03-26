@@ -8,7 +8,7 @@ class Header extends React.Component {
   }
 
   openCart() {
-    document.getElementById("nav-cart-id").style.width = "40%";
+    document.getElementById("nav-cart-id").style.width = "50%";
   }
 
   closeCart(e) {

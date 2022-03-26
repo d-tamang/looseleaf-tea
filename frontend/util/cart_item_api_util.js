@@ -12,13 +12,15 @@ export const fetchCartItem = (cartItemId) => {
   })
 };
 
-export const createCartItem = (userId, teaId) => (
+export const createCartItem = (userId, teaId, price, size) => (
   $.ajax({
     method: "POST",
     url: "/api/cart_items",
-    data: { cartItemId: {
-      userId: userId,
-      teaId: teaId
+    data: { cart_item: {
+      user_id: userId,
+      tea_id: teaId,
+      price: price,
+      size: size
     } }
   })
 );

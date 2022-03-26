@@ -13,6 +13,8 @@ Tea.destroy_all
 CartItem.destroy_all
 # Review.destroy_all
 
+# USERS
+
 demo_user = User.create!(
   first_name: "Demo",
   last_name: "User",
@@ -20,12 +22,19 @@ demo_user = User.create!(
   password: "password"
 )
 
+test_user = User.create!(
+  first_name: "Test",
+  last_name: "Tester",
+  email: "test@test.com",
+  password: "testing"
+)
+
 # TEAS
 
 catalina_mint = Tea.create!(
   name: "Catalina Mint",
   category: "Herbal",
-  description: "It’s a blend we believe Catalina, from the famous movie Catalina La Grande, would have loved. A timeless classic mint tea refined to perfection. A single brew of Catalina Mint delivers a pure and refreshing taste that is shown to rejuvenate the body with benefits including easing digestion, relieving migraines, and improving the quality of one’s sleep. Whether brewed as a soothing mug of hot tea or incorporated into a chilled glass of mint tea lemonade, Catalina Mint is the tea that goes with everything.",
+  description: "It's a blend we believe Catalina, from the famous movie Catalina La Grande, would have loved. A timeless classic mint tea refined to perfection. A single brew of Catalina Mint delivers a pure and refreshing taste that is shown to rejuvenate the body with benefits including easing digestion, relieving migraines, and improving the quality of one’s sleep. Whether brewed as a soothing mug of hot tea or incorporated into a chilled glass of mint tea lemonade, Catalina Mint is the tea that goes with everything.",
   price: 15,
   size: "S"
 )

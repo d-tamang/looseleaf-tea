@@ -29,8 +29,8 @@ export const fetchCartItem = cartItemId => dispatch => (
     .then(cartItem => dispatch(receiveCartItem(cartItem)))
 )
 
-export const createCartItem = (userId, teaId) => dispatch => (
-  APIUtil.createCartItem(userId, teaId)
+export const createCartItem = (userId, teaId, price, size) => dispatch => (
+  APIUtil.createCartItem(userId, teaId, price, size)
     .then(cartItem => dispatch(receiveCartItem(cartItem)))
 )
 

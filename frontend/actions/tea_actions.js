@@ -16,9 +16,9 @@ const receiveTea = (tea) => ({
 export const fetchTeas = () => dispatch => (
   TeaAPIUtil.fetchTeas()
     .then(fetchedTeas => dispatch(receiveTeas(fetchedTeas)))
-)
+);
 
 export const fetchTea = teaId => dispatch => (
   TeaAPIUtil.fetchTea(teaId)
     .then(fetchedTea => dispatch(receiveTea(fetchedTea)))
-)
+);

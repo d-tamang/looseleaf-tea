@@ -52,8 +52,9 @@ class TeaItemShow extends React.Component {
 
   addToCart(e) {
     e.preventDefault();
+    if (!this.props.currentUser) return this.props.history.push('/account/login');
     this.props.createCartItem(this.props.currentUser.id, this.props.tea.id, this.state.price, this.state.size);
-    document.getElementById("nav-cart-id").style.width = "50%";
+    document.getElementById("nav-cart-id").style.width = "45%";
   }
 
   render() {

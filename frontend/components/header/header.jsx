@@ -8,7 +8,7 @@ class Header extends React.Component {
   }
 
   openCart() {
-    document.getElementById("nav-cart-id").style.width = "50%";
+    document.getElementById("nav-cart-id").style.width = "45%";
   }
 
   closeCart(e) {
@@ -39,8 +39,10 @@ class Header extends React.Component {
           <div className="nav-link" onClick={this.openCart}><img id="cart-img" src="images/cart.png" />Cart</div>
         </div>
         <div className="nav-cart" id="nav-cart-id">
-          <button onClick={this.closeCart}>X</button>
-          <CartItemContainer />
+          <div className="inner-cart">
+            <button id="close-cart-x" onClick={this.closeCart}><img id="close-cart-icon" src="images/closeicon.png" /></button>
+            <CartItemContainer />
+          </div>
         </div>
       </header>
     )

@@ -7,4 +7,8 @@ class Tea < ApplicationRecord
   has_many :cart_items,
     class_name: :CartItem,
     foreign_key: :tea_id
+
+  has_many :reviews,
+    class_name: :Review,
+    foreign_key: :tea_id
 end

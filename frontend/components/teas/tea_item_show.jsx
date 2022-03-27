@@ -1,4 +1,5 @@
 import React from "react";
+import ReviewComponent from "../reviews/review_component";
 
 class TeaItemShow extends React.Component {
   constructor(props) {
@@ -13,7 +14,7 @@ class TeaItemShow extends React.Component {
   }
 
   componentDidMount() {
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
     this.props.fetchTea(this.props.match.params.teaId);
   }
 
@@ -58,27 +59,39 @@ class TeaItemShow extends React.Component {
   }
 
   render() {
-    if (!this.props.tea) return null;
+    const tea = this.props.tea;
+    if (!tea) return null;
     return (
-      <div className="tea-show-container">
-        <div className="tea-show-left">
-          <img id="tea-show-img" src={this.props.tea.photoUrl}></img>
-          <img id="brewing-guide" src="images/brewingguide.png"></img>
-        </div>
-        <div className="tea-show-right">
-          <div className="inner-right">
-            <div id="tea-show-name">{this.props.tea.name}</div>
-            <div id="tea-show-price">{`$${this.showPrice()}`}</div>
-            <div>
-              <p id="tea-show-size">SIZE</p>
-              <button className="size-button" onClick={() => this.setSize('Small')}>Small</button>
-              <button className="size-button" onClick={() => this.setSize('Large')}>Large</button>
+      <div>
+        <div className="tea-show-container">
+          <div className="tea-show-left">
+            <img id="tea-show-img" src={tea.photoUrl}></img>
+            <img id="brewing-guide" src="images/brewingguide.png"></img>
+          </div>
+          <div className="tea-show-right">
+            <div className="inner-right">
+              <div id="tea-show-name">{tea.name}</div>
+              <div id="tea-show-price">{`$${this.showPrice()}`}</div>
+              <div>
+                <p id="tea-show-size">SIZE</p>
+                <button className="size-button" onClick={() => this.setSize('Small')}>Small</button>
+                <button className="size-button" onClick={() => this.setSize('Large')}>Large</button>
+              </div>
+              <br />
+              <div>{this.showButton()}</div>
+              <div id="tea-description">{tea.description}</div>
             </div>
-            <br />
-            <div>{this.showButton()}</div>
-            <div id="tea-description">{this.props.tea.description}</div>
           </div>
         </div>
+        <ReviewComponent
+          currentUser={this.props.currentUser}
+          tea={tea}
+          reviews={this.props.reviews}
+          fetchReviews={this.props.fetchReviews}
+          createReview={this.props.createReview}
+          editReview={this.props.editReview}
+          deleteReview={this.props.deleteReview}
+        />
       </div>
     )
   }

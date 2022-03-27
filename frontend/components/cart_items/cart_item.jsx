@@ -40,6 +40,7 @@ class CartItem extends React.Component {
   }
 
   render() {
+    if (!this.props.cartItems) return null;
     let usersCart = [];
     for (let cartItem of this.props.cartItems) {
       if (cartItem.userId === this.props.currentUser.id) {
@@ -63,7 +64,13 @@ class CartItem extends React.Component {
           <div className="checkout-modal">
             <div className="modal-content">
               <button id="checkout-button" onClick={(e) => this.closeModal(e)}><img id="modal-x-icon" src="images/closeicon.png"/></button>
-              <p>Thanks for browsing the site!</p>
+              <p className="modal-text">Thanks for browsing LooseLeaf Co!</p>
+              <br />
+              <p>All teas feaured are real and can be purchased at site muse,</p>
+              <br />
+              <p>www.lelandtea.com</p>
+              <br />
+              <p className="modal-text">Connect with me at my links below!</p>
             </div>
           </div>
         </div>

@@ -103,7 +103,7 @@
   display: none;
   position: fixed;
   z-index: 1;
-  padding-top: 300px;
+  padding-top: 250px;
   left: 0;
   top: 0;
   width: 100%;
@@ -115,9 +115,9 @@
 .modal-content {
   background-color: #fff;
   margin: auto;
-  padding: 20px 20px;
+  padding: 30px 30px;
   border: 1px solid #333;
-  width: 30%;
+  width: 35%;
   text-align: center;
 }
 
@@ -130,4 +130,8 @@
 #modal-x-icon {
   width: 15px;
   height: 15px;
+}
+
+.modal-text {
+  font-family: "Inter-Regular";
 }

@@ -8,9 +8,9 @@ const receiveTeas = (teas) => ({
   teas
 });
 
-const receiveTea = (tea) => ({
+const receiveTea = (payload) => ({
   type: RECEIVE_TEA,
-  tea
+  payload
 });
 
 export const fetchTeas = () => dispatch => (
@@ -20,5 +20,5 @@ export const fetchTeas = () => dispatch => (
 
 export const fetchTea = teaId => dispatch => (
   TeaAPIUtil.fetchTea(teaId)
-    .then(fetchedTea => dispatch(receiveTea(fetchedTea)))
+    .then(payload => dispatch(receiveTea(payload)))
 );

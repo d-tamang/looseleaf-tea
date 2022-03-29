@@ -1,6 +1,6 @@
 class Api::TeasController < ApplicationController
   def index
-    @teas = Tea.all
+    @teas = Tea.all.includes(:reviews)
     render :index
   end
 

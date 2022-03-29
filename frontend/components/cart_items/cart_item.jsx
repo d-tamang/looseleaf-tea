@@ -16,10 +16,10 @@ class CartItem extends React.Component {
     return usersCart.map((cartItem, i) => (
       <div key={i} className="cart-tea-item">
         <div id="left-cart">
-          <img id="cart-tea-image" src={this.props.teas[cartItem.teaId - 1].photoUrl} />
+          <img id="cart-tea-image" src={this.props.teas[cartItem.teaId].image} />
         </div>
         <div className="right-cart">
-          <div>{this.props.teas[cartItem.teaId - 1].name}</div>
+          <div>{this.props.teas[cartItem.teaId].name}</div>
           <div>{cartItem.size}</div>
           <div>{`$${cartItem.price}.00`}</div>
           <div id="hidden-subtotal">{this.subtotal += cartItem.price}</div>

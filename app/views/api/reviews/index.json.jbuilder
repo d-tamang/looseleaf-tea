@@ -6,8 +6,8 @@
     json.rating review.rating
     json.teaId review.tea_id
     json.userId review.user_id
-    json.created_at review.created_at
-    json.updated_at review.updated_at
+    json.createdAt review.created_at
+    json.updatedAt review.updated_at
     json.name review.user.first_name
   end
 end

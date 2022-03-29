@@ -1,4 +1,5 @@
 import { RECEIVE_TEAS, RECEIVE_TEA } from '../actions/tea_actions';
+import { RECEIVE_CART_ITEMS } from '../actions/cart_item_actions';
 
 const teasReducer = (state = {}, action) => {
   Object.freeze(state);
@@ -8,8 +9,10 @@ const teasReducer = (state = {}, action) => {
     case RECEIVE_TEAS:
       return action.teas;
     case RECEIVE_TEA:
-      newState[action.tea.id] = action.tea;
+      newState[action.payload.tea.id] = action.payload.tea;
       return newState;
+    case RECEIVE_CART_ITEMS:
+      return Object.assign({}, state, action.payload.teas);
     default:
       return state;
   }

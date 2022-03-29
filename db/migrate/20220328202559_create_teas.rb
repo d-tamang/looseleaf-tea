@@ -5,6 +5,7 @@ class CreateTeas < ActiveRecord::Migration[5.2]
       t.string :category, null: false
       t.text :description, null: false
       t.integer :price, null: false
+      t.string :image, null: false
       t.string :size
 
       t.timestamps

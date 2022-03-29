@@ -6,7 +6,7 @@ const cartItemsReducer = (state = {}, action) => {
   
   switch (action.type) {
     case RECEIVE_CART_ITEMS:
-      return action.cartItems;
+      return action.payload.cartItems;
     case RECEIVE_CART_ITEM:
       newState[action.cartItem.id] = action.cartItem;
       return newState;

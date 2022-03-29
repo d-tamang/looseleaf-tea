@@ -65,7 +65,7 @@ class TeaItemShow extends React.Component {
       <div>
         <div className="tea-show-container">
           <div className="tea-show-left">
-            <img id="tea-show-img" src={tea.photoUrl}></img>
+            <img id="tea-show-img" src={tea.image}></img>
             <img id="brewing-guide" src="images/brewingguide.png"></img>
           </div>
           <div className="tea-show-right">
@@ -86,11 +86,10 @@ class TeaItemShow extends React.Component {
         <ReviewComponent
           currentUser={this.props.currentUser}
           tea={tea}
-          reviews={this.props.reviews}
-          fetchReviews={this.props.fetchReviews}
           createReview={this.props.createReview}
           editReview={this.props.editReview}
           deleteReview={this.props.deleteReview}
+          reviews={this.props.reviews}
         />
       </div>
     )

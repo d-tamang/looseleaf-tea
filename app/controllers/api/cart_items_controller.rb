@@ -30,3 +30,4 @@ class Api::CartItemsController < ApplicationController
     params.require(:cart_item).permit(:user_id, :tea_id, :price, :size)
   end
 end
+

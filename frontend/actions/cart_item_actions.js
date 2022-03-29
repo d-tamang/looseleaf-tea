@@ -5,9 +5,9 @@ export const RECEIVE_CART_ITEM = "RECEIVE_CART_ITEM";
 export const REMOVE_CART_ITEM = "REMOVE_CART_ITEM";
 export const RECEIVE_CART_ERRORS = 'RECEIVE_CART_ERRORS';
 
-const receiveCartItems = (cartItems) => ({
+const receiveCartItems = (payload) => ({
   type: RECEIVE_CART_ITEMS,
-  cartItems
+  payload
 });
 
 const receiveCartItem = (cartItem) => ({

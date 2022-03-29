@@ -1,5 +1,5 @@
 import React from "react";
-import ReviewComponent from "../reviews/review_component";
+import ReviewIndex from "../reviews/review_index";
 
 class TeaItemShow extends React.Component {
   constructor(props) {
@@ -83,7 +83,7 @@ class TeaItemShow extends React.Component {
             </div>
           </div>
         </div>
-        <ReviewComponent
+        <ReviewIndex
           currentUser={this.props.currentUser}
           tea={tea}
           createReview={this.props.createReview}

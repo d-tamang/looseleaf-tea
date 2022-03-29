@@ -14,7 +14,7 @@ class Api::CartItemsController < ApplicationController
     if @cart_item.save!
       render :show
     else
-      render json: ['Must be signed in to add to cart'], status: 422
+      render json: @cart_item.errors.full_messages, status: 422
     end
   end
 

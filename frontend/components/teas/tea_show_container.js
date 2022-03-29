@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { fetchTea, fetchTeas } from '../../actions/tea_actions';
+import { fetchTea } from '../../actions/tea_actions';
 import TeaItemShow from './tea_item_show';
 import { createCartItem } from '../../actions/cart_item_actions';
 import { createReview, editReview, deleteReview } from '../../actions/review_actions';

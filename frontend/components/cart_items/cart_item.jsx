@@ -43,7 +43,7 @@ class CartItem extends React.Component {
     if (!this.props.cartItems) return null;
     let usersCart = [];
     for (let cartItem of this.props.cartItems) {
-      if (cartItem.userId === this.props.currentUser.id) {
+      if (this.props.currentUser && cartItem.userId === this.props.currentUser.id) {
         usersCart.push(cartItem);
       }
     }

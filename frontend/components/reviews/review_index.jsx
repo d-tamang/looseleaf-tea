@@ -1,9 +1,19 @@
 import React from 'react';
 import ReviewForm from './review_form';
+import { Link } from 'react-router-dom';
 
 class ReviewIndex extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      title: "",
+      body: ""
+    }
+  }
+
+  removeReview(e, reviewId) {
+    e.preventDefault()
+    this.props.deleteReview(reviewId);
   }
 
   showReviews() {
@@ -21,6 +31,10 @@ class ReviewIndex extends React.Component {
           <div>{review.title}</div>
           <div>{review.body}</div>
           <div>{date.toDateString().slice(4)}</div>
+          {this.props.currentUser.id === review.userId ? <div>
+            <Link to={`/teas/${this.props.tea.id}/reviews/${review.id}/edit`}><button>EDIT REVIEW</button></Link>
+            <button onClick={(e) => this.removeReview(e, review.id)}>DELETE REVIEW</button>
+            </div> : <div id="hidden-review-div"></div>}
         </div>
       })
     }

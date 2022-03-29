@@ -13,6 +13,7 @@ import LoginFormContainer from "../components/account/login_form_container";
 import SignupFormContainer from "../components/account/signup_form_container";
 import HomePage from "./homepage";
 import Footer from "./footer";
+import EditReviewContainer from '../components/reviews/edit_review_container';
 
 const App = () => (
   <div className="app">
@@ -22,6 +23,7 @@ const App = () => (
       <Route exact path="/teas/green" component={GreenTeasContainer} />
       <Route exact path="/teas/herbal" component={HerbalTeasContainer} />
       <Route exact path="/teas/:teaId" component={TeaShowContainer} />
+      <ProtectedRoute path="/teas/:id/reviews/:reviewId/edit" component={EditReviewContainer} />
       <Route exact path="/teas" component={TeasIndexContainer} />
       <Route exact path="/menu" render={MenuShow} />
       <ProtectedRoute exact path="/account" component={AccountShowContainer} />

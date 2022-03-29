@@ -1,4 +1,4 @@
-import { RECEIVE_REVIEWS, RECEIVE_REVIEW, REMOVE_REVIEW } from '../actions/review_actions';
+import { RECEIVE_REVIEW, REMOVE_REVIEW } from '../actions/review_actions';
 import { RECEIVE_TEA } from '../actions/tea_actions';
 
 const reviewsReducer = (state = {}, action) => {

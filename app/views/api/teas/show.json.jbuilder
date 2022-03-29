@@ -11,4 +11,5 @@ json.reviews @tea.reviews.each do |review|
   json.teaId review.tea_id
   json.userId review.user_id
   json.createdAt review.created_at
+  json.name review.user.first_name
 end

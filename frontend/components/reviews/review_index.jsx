@@ -31,6 +31,7 @@ class ReviewIndex extends React.Component {
           <div>{review.rating}/5</div>
           <div id="posted-review-title">{review.title}</div>
           <div id="posted-review-body">{review.body}</div>
+          <div id="posted-review-name">{review.name}</div>
           <div>{date.toDateString().slice(4)}</div>
           {this.props.currentUser.id === review.userId ? <div>
             <Link to={`/teas/${this.props.tea.id}/reviews/${review.id}/edit`}><button className="review-icon-box"><img className="review-button-icon" src="images/editicon.png"/></button></Link>

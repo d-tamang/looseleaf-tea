@@ -6,6 +6,7 @@ class AccountShow extends React.Component {
   }
 
   render() {
+    window.scrollTo(0, 0);
     return (
       <div className="account-container">
         <div id="account-header">My Account</div>

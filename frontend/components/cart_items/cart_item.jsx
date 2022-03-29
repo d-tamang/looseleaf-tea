@@ -54,6 +54,7 @@ class CartItem extends React.Component {
     } else {
       return (
         <div>
+          <div id="cart-header">Shopping Cart</div>
           {this.showCart(usersCart)}
           <div className="post-tea-cart">
             <div className="cart-text">SUBTOTAL</div>

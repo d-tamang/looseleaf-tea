@@ -1,0 +1,77 @@
+.first-component-box {
+  width: 100%;
+  height: 800px;
+}
+
+.second-component-box {
+  width: 100%;
+  height: 600px;
+}
+
+.first-component {
+  background-image: url("images/homepagepic.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  color: #fff;
+}
+
+.second-component {
+  background-image: url("images/homepagepic2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  color: #fff;
+}
+
+.first-component-text {
+  float: right;
+  margin-top: 250px;
+  padding-top: 50px;
+  padding-right: 70px;
+  z-index: 1;
+  text-align: right;
+  font-family: "Inter-Regular";
+}
+
+.second-component-text {
+  float: left;
+  margin-top: 70px;
+  padding: 70px;
+  z-index: 1;
+  text-align: left;
+  font-family: "Inter-Regular";
+}
+
+.first-component-text div {
+  padding: 15px;
+}
+
+.second-component-text div {
+  padding: 15px;
+}
+
+.text-line {
+  font-family: "Inter-SemiBold";
+  font-size: 30px;
+}
+
+#shop-teas-button {
+  width: 150px;
+  border-radius: 12px;
+  padding: 14px 10px;
+  background-color: #835836;
+  color: #fff;
+  border-style: hidden;
+  font-family: "Inter-SemiBold";
+}
+
+#menu-button {
+  width: 100px;
+  border-radius: 12px;
+  padding: 14px 10px;
+  background-color: #835836;
+  color: #fff;
+  border-style: hidden;
+  font-family: "Inter-SemiBold";
+}

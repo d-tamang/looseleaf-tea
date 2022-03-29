@@ -49,15 +49,22 @@
   margin-top: 50px;
 }
 
+#cart-header {
+  font-family: "Inter-SemiBold";
+  font-size: 25px;
+  padding: 10px;
+  text-align: center;
+}
+
 #close-cart-icon {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
 }
 
 #close-cart-x {
   border: none;
-  float: right;
   background-color: #fff;
+  float: right;
 }
 
 #hidden-subtotal {

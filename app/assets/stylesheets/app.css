@@ -8,6 +8,11 @@
   src: url("Inter-Regular.ttf");
 }
 
+@font-face {
+  font-family: "Inter-SemiBold";
+  src: url("Inter-SemiBold.ttf");
+}
+
 .app {
   background-color: #fff;
   font-family: "Inter-ExtraLight";
@@ -26,9 +31,4 @@ a:hover {
 button:hover {
   cursor: pointer;
   opacity: 0.7;
-}
-
-/* temp */
-.homepage {
-  margin-top: 100px;
 }

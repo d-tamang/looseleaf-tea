@@ -39,9 +39,8 @@
 }
 
 .review-icon-box {
-  background-color: white;
+  background-color: #fff;
   border: none;
-  margin-top: 10px;
 }
 
 .review-button-icon {
@@ -77,15 +76,13 @@ textarea::placeholder {
   margin-top: 20px;
 }
 
+.posted-reviews div {
+  padding: 6px;
+}
+
 #posted-review-title {
   font-size: 20px;
   font-family: "Inter-Regular";
-  margin-top: 10px;
-}
-
-#posted-review-body {
-  margin-top: 10px;
-  margin-bottom: 10px;
 }
 
 .edit-review-box {

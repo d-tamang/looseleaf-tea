@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import CartItemContainer from "../cart_items/cart_item_container";
-import SearchBarContainer from '../searchbar/searchbar_container';
+import SearchBar from './searchbar';
 
 class Header extends React.Component {
   constructor(props) {
@@ -52,7 +52,7 @@ class Header extends React.Component {
         <div className="nav-search" id="nav-search-id">
           <div className="inner-search">
             <button id="close-search-x" onClick={this.closeSearch}><img id="close-search-icon" src="images/closeicon.png" /></button>
-            <SearchBarContainer />
+            <SearchBar teas={this.props.teas} />
           </div>
         </div>
         <div className="nav-cart" id="nav-cart-id">

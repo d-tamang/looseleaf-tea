@@ -8,7 +8,6 @@ class SearchBar extends React.Component {
       searchField: '',
       results: []
     }
-    this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange(e) {
@@ -36,7 +35,7 @@ class SearchBar extends React.Component {
             <div id="search-tea-name">{tea.name}</div>
           </div>
         ))
-      } else if (this.state.searchField !== '') {
+      } else if (this.state.searchField !== "") {
         filteredResults = (
           <div id="no-results">Your search for "{this.state.searchField}" did not yield any results.</div>
         )
@@ -47,7 +46,7 @@ class SearchBar extends React.Component {
         <div id="search-header">Search</div>
         <div className="search-input">
           <div><img id="search-field-icon" src="images/searchicon.png" /></div>
-          <div><input type="search" value={this.state.searchInput} placeholder="Search our store" onChange={this.handleChange}></input></div>
+          <div><input type="search" value={this.state.searchInput} placeholder="Search our store" onChange={(e) => this.handleChange(e)}></input></div>
         </div>
         <div>{filteredResults}</div>
       </div>

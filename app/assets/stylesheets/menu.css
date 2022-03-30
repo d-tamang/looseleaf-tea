@@ -4,22 +4,22 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 50px;
+  padding: 40px;
 }
 
 .menu div {
   font-family: "Inter-Regular";
   color: rgb(173, 159, 121);
+  margin: 5px;
 }
 
 .menu p {
-  padding: 5px;
+  padding: 6px;
 }
 
 #menu-title {
   font-family: "Inter-Regular";
   font-weight: bold;
   font-size: 25px;
-  padding-top: 20px;
-  padding-bottom: 40px;
+  padding: 30px;
 }

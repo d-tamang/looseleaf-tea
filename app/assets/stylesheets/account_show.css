@@ -6,7 +6,6 @@
   padding: 40px;
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
 }
 
 .account-title {
@@ -15,7 +14,7 @@
 
 #account-header {
   padding: 30px;
-  font-size: 40px;
+  font-size: 35px;
   font-weight: bold;
   text-align: center;
 }

@@ -3,7 +3,6 @@ import * as APIUtil from "../util/cart_item_api_util";
 export const RECEIVE_CART_ITEMS = "RECEIVE_CART_ITEMS";
 export const RECEIVE_CART_ITEM = "RECEIVE_CART_ITEM";
 export const REMOVE_CART_ITEM = "REMOVE_CART_ITEM";
-export const RECEIVE_CART_ERRORS = 'RECEIVE_CART_ERRORS';
 
 const receiveCartItems = (payload) => ({
   type: RECEIVE_CART_ITEMS,
@@ -30,9 +29,14 @@ export const fetchCartItem = cartItemId => dispatch => (
     .then(cartItem => dispatch(receiveCartItem(cartItem)))
 );
 
-export const createCartItem = (userId, teaId, price, size) => dispatch => (
-  APIUtil.createCartItem(userId, teaId, price, size).then(cartItem => dispatch(receiveCartItem(cartItem)))
+export const createCartItem = (userId, teaId, quantity, price, size) => dispatch => (
+  APIUtil.createCartItem(userId, teaId, quantity, price, size).then(cartItem => dispatch(receiveCartItem(cartItem)))
 );
+
+export const updateCartItem = (cartItem, quantity) => dispatch => (
+  APIUtil.updateCartItem(cartItem, quantity)
+      .then(cartItem => dispatch(receiveCartItem(cartItem)))
+)
 
 export const deleteCartItem = cartItemId => dispatch => (
   APIUtil.deleteCartItem(cartItemId)

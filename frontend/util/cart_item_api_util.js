@@ -12,18 +12,31 @@ export const fetchCartItem = (cartItemId) => {
   })
 };
 
-export const createCartItem = (userId, teaId, price, size) => (
+export const createCartItem = (userId, teaId, quantity, price, size) => (
   $.ajax({
     method: "POST",
     url: "/api/cart_items",
     data: { cart_item: {
       user_id: userId,
       tea_id: teaId,
+      quantity: quantity,
       price: price,
       size: size
     } }
   })
 );
+
+export const updateCartItem = (cartItem, quantity) => {
+  let id = cartItem.id
+  return $.ajax({
+    method: "PATCH",
+    url: `/api/cart_items/${cartItem.id}`,
+    data: { 
+      id,
+      quantity
+    }
+  })
+}
 
 export const deleteCartItem = (cartItemId) => (
   $.ajax({

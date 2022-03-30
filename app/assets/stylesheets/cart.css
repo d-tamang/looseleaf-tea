@@ -31,7 +31,8 @@
 
 .right-cart {
   text-align: center;
-  padding: 40px;
+  padding-right: 40px;
+  padding-top: 20px;
 }
 
 .right-cart > div {
@@ -135,4 +136,16 @@
 
 .modal-text {
   font-family: "Inter-Regular";
+}
+
+.cart-quantity-btn {
+  background-color: #fff;
+  border: none;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.cart-quantity-icon {
+  width: 10px;
+  height: 10px;
 }

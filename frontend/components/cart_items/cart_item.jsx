@@ -11,6 +11,22 @@ class CartItem extends React.Component {
     this.props.fetchTeas();
   }
 
+  incrementQuantity(e, cartItem) {
+    e.preventDefault;
+    let newQuantity = cartItem.quantity + 1;
+    this.props.updateCartItem(cartItem, newQuantity);
+  }
+
+  decrementQuantity(e, cartItem) {
+    e.preventDefault;
+    if (cartItem.quantity === 1) {
+      this.props.deleteCartItem(cartItem.id);
+    } else {
+      let newQuantity = cartItem.quantity - 1;
+      this.props.updateCartItem(cartItem, newQuantity);
+    }
+  }
+
   showCart(usersCart) {
     this.subtotal = 0;
     return usersCart.map((cartItem, i) => (
@@ -22,7 +38,16 @@ class CartItem extends React.Component {
           <div>{this.props.teas[cartItem.teaId].name}</div>
           <div>{cartItem.size}</div>
           <div>{`$${cartItem.price}.00`}</div>
-          <div id="hidden-subtotal">{this.subtotal += cartItem.price}</div>
+          <div>
+            <button className="cart-quantity-btn" onClick={(e) => this.decrementQuantity(e, cartItem)}>
+              <img className="cart-quantity-icon" src="images/minusicon.png"/>
+            </button>
+            {cartItem.quantity}
+            <button className="cart-quantity-btn" onClick={(e) => this.incrementQuantity(e, cartItem)}>
+              <img className="cart-quantity-icon" src="images/plusicon.png"/>
+            </button>
+          </div>
+          <div id="hidden-subtotal">{this.subtotal += cartItem.price * cartItem.quantity}</div>
           <div><button id="remove-button" onClick={() => this.props.deleteCartItem(cartItem.id)}>Remove</button></div>
         </div>
       </div>

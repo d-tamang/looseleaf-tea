@@ -18,6 +18,16 @@ class Api::CartItemsController < ApplicationController
     end
   end
 
+  def update
+    @cart_item = CartItem.find_by(id: params[:id])
+    if @cart_item
+      @cart_item.update!(:quantity => params[:quantity])
+      render :show
+    else
+      render json: @cart_item.errors.full_messages, status: 422
+    end
+  end
+
   def destroy
     @cart_item = CartItem.find_by(id: params[:id])
     @cart_item.destroy
@@ -27,7 +37,7 @@ class Api::CartItemsController < ApplicationController
   private
 
   def cart_item_params
-    params.require(:cart_item).permit(:user_id, :tea_id, :price, :size)
+    params.require(:cart_item).permit(:user_id, :tea_id, :quantity, :price, :size)
   end
 end
 

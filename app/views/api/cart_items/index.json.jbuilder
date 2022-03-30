@@ -4,6 +4,7 @@ json.cartItems do
       json.id cart_item.id
       json.userId cart_item.user_id
       json.teaId cart_item.tea_id
+      json.quantity cart_item.quantity
       json.price cart_item.price
       json.size cart_item.size
     end

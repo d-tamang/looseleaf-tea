@@ -9,13 +9,15 @@ class TeaItemShow extends React.Component {
       name: "",
       category: "",
       price: 0,
-      size: ""
-    }
+      size: "",
+      quantity: 1
+    };
   }
 
   componentDidMount() {
     window.scrollTo(0, 0);
     this.props.fetchTea(this.props.match.params.teaId);
+    this.props.fetchCartItems();
   }
 
   setSize(size) {
@@ -54,7 +56,15 @@ class TeaItemShow extends React.Component {
   addToCart(e) {
     e.preventDefault();
     if (!this.props.currentUser) return this.props.history.push('/account/login');
-    this.props.createCartItem(this.props.currentUser.id, this.props.tea.id, this.state.price, this.state.size);
+    for (let cartItem of this.props.cartItems) {
+      if (cartItem.teaId === this.props.tea.id && cartItem.userId === this.props.currentUser.id && cartItem.size === this.state.size) {
+        let newQuantity = this.state.quantity + cartItem.quantity;
+        this.props.updateCartItem(cartItem, newQuantity);
+        document.getElementById("nav-cart-id").style.width = "45%";
+        return;
+      }
+    }
+    this.props.createCartItem(this.props.currentUser.id, this.props.tea.id, this.state.quantity, this.state.price, this.state.size);
     document.getElementById("nav-cart-id").style.width = "45%";
   }
 

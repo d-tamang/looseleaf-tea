@@ -45,7 +45,7 @@ class ReviewIndex extends React.Component {
   render() {
     if (!this.props.tea) return null;
     return (
-      <div>
+      <div className="reviews-index-box">
         <div id="reviews-header">Reviews</div>
         <div className="reviews-box">
           <div>

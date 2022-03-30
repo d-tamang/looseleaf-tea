@@ -2,9 +2,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: "Inter-Regular";
+  font-family: "Inter-SemiBold";
   font-size: 15px;
-  font-weight: bold;
   background-color: white;
   padding: 25px;
   position: fixed;
@@ -43,7 +42,7 @@
 #logo {
   font-family: garamond;
   font-size: 20px;
-  padding-right: 100px;
+  font-weight: bold;
 }
 
 #logo-img {
@@ -51,7 +50,7 @@
   height: 25px;
 }
 
-#account-img {
+#account-icon, #cart-icon, #search-icon {
   width: 15px;
   height: 15px;
   padding-right: 8px;

@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import CartItemContainer from "../cart_items/cart_item_container";
+import SearchBarContainer from '../searchbar/searchbar_container';
 
 class Header extends React.Component {
   constructor(props) {
@@ -16,12 +17,21 @@ class Header extends React.Component {
     document.getElementById("nav-cart-id").style.width = "0";
   }
 
+  openSearch() {
+    document.getElementById("nav-search-id").style.width = "45%";
+  }
+
+  closeSearch(e) {
+    e.preventDefault();
+    document.getElementById("nav-search-id").style.width = "0";
+  }
+
   render() {
     let accountLink;
     if (this.props.currentUser) {
-      accountLink = <NavLink className="nav-link" exact to="/account"><img id="account-img" src="images/account.png" />Account</NavLink>;
+      accountLink = <NavLink className="nav-link" exact to="/account"><img id="account-icon" src="images/account.png" />Account</NavLink>;
     } else {
-      accountLink = <NavLink className="nav-link" exact to="/account/register"><img id="account-img" src="images/account.png" />Account</NavLink>
+      accountLink = <NavLink className="nav-link" exact to="/account/register"><img id="account-icon" src="images/account.png" />Account</NavLink>
     }
     return (
       <header className="nav-bar">
@@ -35,8 +45,15 @@ class Header extends React.Component {
           <NavLink exact to="/"><img id="logo-img" src="images/leaf.png" />LooseLeaf Tea Co.</NavLink>
         </div>
         <div className="right-nav">
+          <div className="nav-link" onClick={this.openSearch}><img id="search-icon" src="images/searchicon.png" />Search</div>
           <div>{accountLink}</div>
-          <div className="nav-link" onClick={this.openCart}><img id="cart-img" src="images/cart.png" />Cart</div>
+          <div className="nav-link" onClick={this.openCart}><img id="cart-icon" src="images/cart.png" />Cart</div>
+        </div>
+        <div className="nav-search" id="nav-search-id">
+          <div className="inner-search">
+            <button id="close-search-x" onClick={this.closeSearch}><img id="close-search-icon" src="images/closeicon.png" /></button>
+            <SearchBarContainer />
+          </div>
         </div>
         <div className="nav-cart" id="nav-cart-id">
           <div className="inner-cart">

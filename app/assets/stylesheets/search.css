@@ -1,0 +1,46 @@
+/* identical tags also reside in cart and header */
+
+.search-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.search-input input {
+  width: 450px;
+  height: 40px;
+}
+
+#search-tea-img {
+  width: 180px;
+  height: 180px;
+}
+
+.search-results-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 20px;
+  border-bottom: 1px solid #333;
+}
+
+#search-field-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+#search-tea-name {
+  padding-right: 70px;
+  font-family: "Inter-Regular";
+  align-self: center;
+}
+
+#no-results {
+  text-align: center;
+  margin-top: 20px;
+}

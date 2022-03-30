@@ -47,7 +47,7 @@ class Header extends React.Component {
         <div className="right-nav">
           <div className="nav-link" onClick={this.openSearch}><img id="search-icon" src="images/searchicon.png" />Search</div>
           <div>{accountLink}</div>
-          <div className="nav-link" onClick={this.openCart}><img id="cart-icon" src="images/cart.png" />Cart</div>
+          <div className="nav-link" onClick={this.openCart}><img id="cart-icon" src="images/cart.png" />Cart - {this.props.cartItems.length}</div>
         </div>
         <div className="nav-search" id="nav-search-id">
           <div className="inner-search">

@@ -28,6 +28,16 @@ class HomePage extends React.Component {
             </div>
           </div>
         </div>
+        <div className="third-component">
+          <div>
+            <div className="third-component-text">Responsibly Sourced</div>
+            <div>Our ingredients and teas are farm to table</div>
+          </div>
+          <div>
+            <div className="third-component-text">Premium, Curated Flavor</div>
+            <div>We've traveled the world to find the best flavors</div>
+          </div>
+        </div>
       </div>
     )
   }

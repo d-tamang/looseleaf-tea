@@ -25,7 +25,7 @@
   flex-direction: row;
   justify-content: space-around;
   padding: 20px;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid rgb(175, 175, 175);
 }
 
 #search-field-icon {

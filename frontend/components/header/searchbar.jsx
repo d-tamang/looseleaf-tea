@@ -38,7 +38,7 @@ class SearchBar extends React.Component {
         ))
       } else if (this.state.searchField !== '') {
         filteredResults = (
-          <div id="no-results">No results found</div>
+          <div id="no-results">Your search for "{this.state.searchField}" did not yield any results.</div>
         )
       }
 

@@ -16,9 +16,7 @@ class EditReviewForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.editReview(this.state);
-    return this.props.history.push(`/teas/${this.props.review.teaId}`);
-    //review IS editing, but only on refresh back at the tea page
+    this.props.editReview(this.state).then(() => {this.props.history.push(`/teas/${this.props.review.teaId}`)});
   }
 
   render() {
@@ -29,11 +27,11 @@ class EditReviewForm extends React.Component {
             <div>
               <select onChange={this.update("rating")} >
                 <option defaultValue={null}>Select Rating</option>
-                <option type="radio" value="1" onChange={this.update("rating")}>1/5</option>
-                <option type="radio" value="2" onChange={this.update("rating")}>2/5</option>
-                <option type="radio" value="3" onChange={this.update("rating")}>3/5</option>
-                <option type="radio" value="4" onChange={this.update("rating")}>4/5</option>
-                <option type="radio" value="5" onChange={this.update("rating")}>5/5</option>
+                <option type="radio" value="1" onChange={this.update("rating")}>1</option>
+                <option type="radio" value="2" onChange={this.update("rating")}>2</option>
+                <option type="radio" value="3" onChange={this.update("rating")}>3</option>
+                <option type="radio" value="4" onChange={this.update("rating")}>4</option>
+                <option type="radio" value="5" onChange={this.update("rating")}>5</option>
               </select>
             </div>
             <div className="review-title-box"><textarea className="review-form-title" type="text" value={this.state.title} onChange={this.update("title")} placeholder="Title"></textarea></div>

@@ -14,12 +14,13 @@
   text-align: center;
   font-family: "Inter-Regular";
   font-size: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .reviews-box {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .review-title-box {
@@ -48,9 +49,8 @@
 }
 
 .review-button-icon {
-  width: 25px;
-  height: 30px;
-  background-color: #fff;
+  width: 20px;
+  height: 23px;
 }
 
 .review-form-button {
@@ -77,11 +77,14 @@ textarea::placeholder {
 }
 
 .posted-reviews {
-  margin-top: 20px;
+  width: 550px;
+  border-bottom: 2px solid rgb(210, 210, 210);
+  margin-left: 40px;
+  margin-bottom: 10px;
 }
 
 .posted-reviews div {
-  padding: 6px;
+  padding: 5px;
 }
 
 #posted-review-title {
@@ -98,5 +101,16 @@ textarea::placeholder {
 }
 
 #no-reviews {
-  margin-top: 80px;
+  margin-top: 90px;
+  margin-left: 40px;
+}
+
+.star {
+  width: 22px;
+  height: 22px;
+}
+
+.star-empty {
+  width: 20px;
+  height: 20px;
 }

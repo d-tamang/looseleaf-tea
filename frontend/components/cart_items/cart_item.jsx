@@ -82,7 +82,7 @@ class CartItem extends React.Component {
           <div id="cart-header">Shopping Cart</div>
           {this.showCart(usersCart)}
           <div className="post-tea-cart">
-            <div className="cart-text">SUBTOTAL</div>
+            <div id="cart-text-subtotal">SUBTOTAL</div>
             <div id="subtotal">${this.subtotal}.00</div>
             <div className="cart-text">Tax included and shipping calculated at checkout</div>
             <button onClick={(e) => this.openModal(e)}>CHECK OUT</button>
@@ -90,7 +90,7 @@ class CartItem extends React.Component {
           <div className="checkout-modal">
             <div className="modal-content">
               <button id="checkout-button" onClick={(e) => this.closeModal(e)}><img id="modal-x-icon" src="images/closeicon.png"/></button>
-              <p className="modal-text">Thanks for browsing LooseLeaf Co!</p>
+              <p className="modal-text">Thanks for browsing LooseLeaf Tea Co!</p>
               <br />
               <p>All teas feaured are real and can be purchased at site muse,</p>
               <br />

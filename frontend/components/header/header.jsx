@@ -34,6 +34,14 @@ class Header extends React.Component {
     return quantity;
   }
 
+  showCartNav() {
+    if (!this.props.cartItems.length) {
+      return <div className="nav-link" onClick={this.openCart}><img id="cart-icon" src="images/cart.png" />Cart</div>
+    } else {
+      return <div className="nav-link" onClick={this.openCart}><img id="cart-icon" src="images/cart.png" />Cart - {this.showQuantity()}</div>
+    }
+  }
+
   render() {
     let accountLink;
     if (this.props.currentUser) {
@@ -55,7 +63,7 @@ class Header extends React.Component {
         <div className="right-nav">
           <div className="nav-link" onClick={this.openSearch}><img id="search-icon" src="images/searchicon.png" />Search</div>
           <div>{accountLink}</div>
-          <div className="nav-link" onClick={this.openCart}><img id="cart-icon" src="images/cart.png" />Cart - {this.showQuantity()}</div>
+          {this.showCartNav()}
         </div>
         <div className="nav-search" id="nav-search-id">
           <div className="inner-search">

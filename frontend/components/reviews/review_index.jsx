@@ -59,7 +59,7 @@ class ReviewIndex extends React.Component {
 
   showReviews() {
     if (this.props.reviews.length === 0) {
-      return <div id="no-reviews">Be the first to leave a review!</div>
+      return <div id="no-reviews">Be the first to leave a tea-view!</div>
     } else {
       return this.props.reviews.map((review, i) => {
         const date = new Date(Date.parse(review.createdAt));

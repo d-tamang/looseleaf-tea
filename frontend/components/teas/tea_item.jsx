@@ -9,7 +9,7 @@ class TeaItem extends React.Component {
   render() {
     return (
       <div>
-        <Link to={`/teas/${this.props.tea.id}`}><img className="teas-index-img" src={this.props.tea.image} /></Link>
+        <Link to={`/teas/${this.props.tea.id}`}><img className="teas-index-img" src={this.props.tea.photoUrl} /></Link>
         <p className="teas-index-name">{this.props.tea.name}</p>
       </div>
     )

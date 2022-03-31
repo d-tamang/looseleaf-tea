@@ -19,6 +19,7 @@ json.teas do
       json.name cart_item.tea.name
       json.price cart_item.tea.price
       json.size cart_item.tea.size
+      json.photoUrl url_for(@tea.photo)
       json.image cart_item.tea.image
     end
   end

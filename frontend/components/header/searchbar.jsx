@@ -31,7 +31,7 @@ class SearchBar extends React.Component {
       if (this.state.results.length > 0) {
         filteredResults = this.state.results.map(tea => (
           <div className="search-results-box">
-            <div><Link to={`/teas/${tea.id}`}><img id="search-tea-img" src={tea.image}/></Link></div>
+            <div><Link to={`/teas/${tea.id}`}><img id="search-tea-img" src={tea.photoUrl}/></Link></div>
             <div id="search-tea-name">{tea.name}</div>
           </div>
         ))

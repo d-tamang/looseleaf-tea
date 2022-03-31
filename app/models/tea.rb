@@ -2,7 +2,7 @@ class Tea < ApplicationRecord
   validates :name, :category, :description, :price, presence: true
   validates :name, uniqueness: true
   
-  #has_one_attached :photo
+  has_one_attached :photo
 
   has_many :cart_items,
     class_name: :CartItem,

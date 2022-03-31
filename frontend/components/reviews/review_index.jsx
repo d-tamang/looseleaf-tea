@@ -58,7 +58,6 @@ class ReviewIndex extends React.Component {
   }
 
   showReviews() {
-    debugger
     if (this.props.reviews.length === 0) {
       return <div id="no-reviews">Be the first to leave a review!</div>
     } else {

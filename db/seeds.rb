@@ -39,8 +39,52 @@ catalina_mint = Tea.create!(
   size: "S",
   image: "images/catalinamint.png"
 )
-#file1 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/catalinamint.png")
-#catalina_mint.photo.attach(io: file1, filename: "catalinamint.png")
+file1 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/catalinamint.png")
+catalina_mint.photo.attach(io: file1, filename: "catalinamint.png")
+
+chrysanthemum = Tea.create!(
+  name: "Chrysanthemum",
+  category: "Herbal",
+  description: "A flower bulb as big and bright as the Chrysanthemum (Ju-Hua) brews a tea of equal luxury and majesty. Once cultivated exclusively for the Emperor of China during the Ming Dynasty, this rare flower is known as, “Emperor’s Yellow Chrysanthemum”. Grown in in the Huang Shan (Yellow Mountain) area of the Anhui Province of China, our Chrysanthemum tea’s elite status is matched by its luxurious flavor as well: smooth, soothing, cooling, floral, and rich with a hint of mint. Deserving of its reputation as one of China’s most popular herbal teas, our Chrysanthemum tea imparts the refined taste of nobility.",
+  price: 15,
+  size: "S",
+  image: "images/chrysanthemum.png"
+)
+file2 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/chrysanthemum.png")
+chrysanthemum.photo.attach(io: file2, filename: "chrysanthemum.png")
+
+cloud_mist = Tea.create!(
+  name: "Cloud Mist",
+  category: "Green",
+  description: "Cloud Mist tea gains its name from the origins of its cultivation, being harvested from the Le Mountains in China. At an altitude so high that the clouds constantly cover the mountainside with a body of mist above the surface. Infused with flavor from this mystical environment, this tea is among the rarest teas to be cultivated, yet its tiny leaves provide one of the finest and most clean taste of a classic Chinese green tea renowned for its cool taste and attractive smell. In the Tang Dynasty, Chinese great tea master Lu Yu even remarked upon the reputation of Cloud Mist tea leaves in his famous work, “The Classic of Tea”; now you can enjoy these legendary tea leaves.",
+  price: 15,
+  size: "S",
+  image: "images/cloudmist.png"
+)
+file3 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/cloudmist.png")
+cloud_mist.photo.attach(io: file3, filename: "cloudmist.png")
+
+darjeeling = Tea.create!(
+  name: "Darjeeling TGBOP",
+  category: "Black",
+  description: "Grown in the world-renown Darjeeling District of West Bengal, India, Darjeeling TGBOP (Tippy Golden Broken Orange Pekoe) is a grade of black tea that is among the most sought after and consumed in the world. Our Darjeeling tea leaves were chosen for their excellent body and flavor, retaining the full body and dark color of this rich black tea with the slight yet musky spiciness. These tea leaves are a treasure for those seeking modestly priced Darjeeling teas with excellent flavor.",
+  price: 15,
+  size: "S",
+  image: "images/darjeelingtgbop.png"
+)
+file4 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/darjeelingtgbop.png")
+darjeeling.photo.attach(io: file4, filename: "darjeelingtgbop.png")
+
+dragonwell = Tea.create!(
+  name: "Dragonwell",
+  category: "Green",
+  description: "Dragonwell Tea, translated from the Chinese term “Longjing Tea”, is considered one of China’s most famous green teas. Grown in the city of Hang Zhou in the Zheijiang province of China, this tea is harvested and dried using a process of pan-firing, where artisans dry the leaves over a series of massive cast-iron pans using techniques that have been perfected by tea masters over centuries of practice. Our variety of Dragonwell tea leaves use the best Dragonwell leaves available in order to deliver a cup of green tea with the smoothest texture, roundest flavor, and the fullest accent of nutty and buttery flavor. A staple for Chinese tea drinkers for centuries, now available for you at home.",
+  price: 15,
+  size: "S",
+  image: "images/dragonwell.png"
+)
+file5 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/dragonwell.png")
+dragonwell.photo.attach(io: file5, filename: "dragonwell.png")
 
 earl_grey = Tea.create!(
   name: "Earl Grey",
@@ -50,8 +94,8 @@ earl_grey = Tea.create!(
   size: "S",
   image: "images/earlgrey.png"
 )
-#file2 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/earlgrey.png")
-#earl_grey.photo.attach(io: file2, filename: "earlgrey.png")
+file6 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/earlgrey.png")
+earl_grey.photo.attach(io: file6, filename: "earlgrey.png")
 
 elderflower = Tea.create!(
   name: "Elderflower",
@@ -61,8 +105,19 @@ elderflower = Tea.create!(
   size: "S",
   image: "images/elderflower.png"
 )
-#file3 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/elderflower.png")
-#elderflower.photo.attach(io: file3, filename: "elderflower.png")
+file7 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/elderflower.png")
+elderflower.photo.attach(io: file7, filename: "elderflower.png")
+
+ginger_rogers = Tea.create!(
+  name: "Ginger Rogers",
+  category: "Herbal",
+  description: "A tea as smooth on the palette as it is on the dance floor. Named after the famed actress and dancer, our Ginger Rogers tea blend combines our herbal tea leaves with a lively combination of lemongrass and dried ginger. With that jazzy fusion of soothing herbs, zesty lemongrass, and spicy ginger, this antioxidant-rich remedy will have you tapping your feet with joy.",
+  price: 15,
+  size: "S",
+  image: "images/gingerrogers.png"
+)
+file8 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/gingerrogers.png")
+ginger_rogers.photo.attach(io: file8, filename: "gingerrogers.png")
 
 ginger_tango = Tea.create!(
   name: "Ginger Tango",
@@ -72,8 +127,8 @@ ginger_tango = Tea.create!(
   size: "S",
   image: "images/gingertango.png"
 )
-#file4 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/gingertango.png")
-#ginger_tango.photo.attach(io: file4, filename: "gingertango.png")
+file9 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/gingertango.png")
+ginger_tango.photo.attach(io: file9, filename: "gingertango.png")
 
 geisha_memoirs = Tea.create!(
   name: "Geisha Memoirs",
@@ -83,8 +138,8 @@ geisha_memoirs = Tea.create!(
   size: "S",
   image: "images/geishamemoirs.png"
 )
-#file5 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/geishamemoirs.png")
-#geisha_memoirs.photo.attach(io: file5, filename: "geishamemoirs.png")
+file10 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/geishamemoirs.png")
+geisha_memoirs.photo.attach(io: file10, filename: "geishamemoirs.png")
 
 genmai_cha = Tea.create!(
   name: "Genmai Cha",
@@ -94,8 +149,30 @@ genmai_cha = Tea.create!(
   size: "S",
   image: "images/genmaicha.png"
 )
-#file6 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/genmaicha.png")
-#genmai_cha.photo.attach(io: file6, filename: "genmaicha.png")
+file11 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/genmaicha.png")
+genmai_cha.photo.attach(io: file11, filename: "genmaicha.png")
+
+gone_with_the_wind = Tea.create!(
+  name: "Gone With the Wind",
+  category: "Green",
+  description: "No need for sweeteners with sipping from a cup of Gone with the Wind. This green tea blend incorporates our highest grade green tea leaves with the full-bodied fruit flavor of passion fruit, fusing the two together as closely as Scarlet O’Hara and Rhett Butler. With subtle yet distinctive tones of green tea matched by the rich fruit flavor of passion fruit, Gone with the Wind is as classic of a tea blend as its namesake. As God is your witness, you’ll never go thirty again!",
+  price: 15,
+  size: "S",
+  image: "images/gonewiththewind.png"
+)
+file12 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/gonewiththewind.png")
+gone_with_the_wind.photo.attach(io: file12, filename: "gonewiththewind.png")
+
+greys_kelly = Tea.create!(
+  name: "Grey's Kelly",
+  category: "Black",
+  description: "Combining the soft, floral aroma of lavender with the full-bodied flavor of Earl Grey, Grey’s Kelly is an original blend of these complementary flavors. With the first sip from a warm cup, the sweet and citrus flavor of Earl Grey will sit heavy on the palette while notes of lavender accent the experience. An excellent blend for fans of Earl Grey who are looking for the perfect complement in their favorite tea, look no further than the lavender-laced Grey’s Kelly.",
+  price: 15,
+  size: "S",
+  image: "images/greyskelly.png"
+)
+file13 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/greyskelly.png")
+greys_kelly.photo.attach(io: file13, filename: "greyskelly.png")
 
 hibiscus = Tea.create!(
   name: "Hibiscus",
@@ -105,8 +182,8 @@ hibiscus = Tea.create!(
   size: "S",
   image: "images/hibiscus.png"
 )
-#file7 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/hibiscus.png")
-#hibiscus.photo.attach(io: file7, filename: "hibiscus.png")
+file14 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/hibiscus.png")
+hibiscus.photo.attach(io: file14, filename: "hibiscus.png")
 
 irish_breakfast = Tea.create!(
   name: "Irish Breakfast",
@@ -116,8 +193,8 @@ irish_breakfast = Tea.create!(
   size: "S",
   image: "images/irishbreakfast.png"
 )
-#file8 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/irishbreakfast.png")
-#irish_breakfast.photo.attach(io: file8, filename: "irishbreakfast.png")
+file15 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/irishbreakfast.png")
+irish_breakfast.photo.attach(io: file15, filename: "irishbreakfast.png")
 
 jasmine_fancy = Tea.create!(
   name: "Jasmine Fancy",
@@ -127,8 +204,8 @@ jasmine_fancy = Tea.create!(
   size: "S",
   image: "images/jasminefancy.png"
 )
-#file9 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/jasminefancy.png")
-#jasmine_fancy.photo.attach(io: file9, filename: "jasminefancy.png")
+file16 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/jasminefancy.png")
+jasmine_fancy.photo.attach(io: file16, filename: "jasminefancy.png")
 
 josephine_baker = Tea.create!(
   name: "Josephine Baker",
@@ -138,8 +215,8 @@ josephine_baker = Tea.create!(
   size: "S",
   image: "images/josephinebaker.png"
 )
-#file10 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/josephinebaker.png")
-#josephine_baker.photo.attach(io: file10, filename: "josephinebaker.png")
+file17 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/josephinebaker.png")
+josephine_baker.photo.attach(io: file17, filename: "josephinebaker.png")
 
 kisses = Tea.create!(
   name: "Kisses",
@@ -149,8 +226,8 @@ kisses = Tea.create!(
   size: "S",
   image: "images/kisses.png"
 )
-#file11 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/kisses.png")
-#kisses.photo.attach(io: file11, filename: "kisses.png")
+file18 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/kisses.png")
+kisses.photo.attach(io: file18, filename: "kisses.png")
 
 lapsang_souchong = Tea.create!(
   name: "Lapsang Souchong",
@@ -160,8 +237,8 @@ lapsang_souchong = Tea.create!(
   size: "S",
   image: "images/lapsang.png"
 )
-#file12 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/lapsangsouchong.png")
-#lapsang_souchong.photo.attach(io: file12, filename: "lapsangsouchong.png")
+file19 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/lapsangsouchong.png")
+lapsang_souchong.photo.attach(io: file19, filename: "lapsangsouchong.png")
 
 mandarin_green = Tea.create!(
   name: "Mandarin Green",
@@ -171,8 +248,8 @@ mandarin_green = Tea.create!(
   size: "S",
   image: "images/mandaringreen.png"
 )
-#file13 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/mandaringreen.png")
-#mandarin_green.photo.attach(io: file13, filename: "mandaringreen.png")
+file20 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/mandaringreen.png")
+mandarin_green.photo.attach(io: file20, filename: "mandaringreen.png")
 
 mumbai_chai = Tea.create!(
   name: "Mumbai Chai",
@@ -182,8 +259,19 @@ mumbai_chai = Tea.create!(
   size: "S",
   image: "images/mumbaichai.png"
 )
-#file14 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/mumbaichai.png")
-#mumbai_chai.photo.attach(io: file14, filename: "mumbaichai.png")
+file21 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/mumbaichai.png")
+mumbai_chai.photo.attach(io: file21, filename: "mumbaichai.png")
+
+peaches = Tea.create!(
+  name: "Peaches",
+  category: "Black",
+  description: "A truly unique blend, for those who can’t resist the invigorating taste of a ripe peach. Traditional Chinese black tea, mixed with Ceylon Orange Pekoe and made unforgettable through the addition of luscious peaches, giving your cup that enrapturing taste you can’t get enough of. Blessed with the mellow aura of fragrant peach blossoms, and subtly spiced by a sliver of ginger to punctuate the tropical sensations.",
+  price: 15,
+  size: "S",
+  image: "images/peaches.png"
+)
+file22 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/peaches.png")
+peaches.photo.attach(io: file22, filename: "peaches.png")
 
 peppermint_chamomile = Tea.create!(
   name: "Peppermint Chamomile",
@@ -193,8 +281,8 @@ peppermint_chamomile = Tea.create!(
   size: "S",
   image: "images/peppermint.png"
 )
-#file15 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/peppermintchamomile.png")
-#peppermint_chamomile.photo.attach(io: file15, filename: "peppermintchamomile.png")
+file23 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/peppermintchamomile.png")
+peppermint_chamomile.photo.attach(io: file23, filename: "peppermintchamomile.png")
 
 rose = Tea.create!(
   name: "Rose",
@@ -204,8 +292,8 @@ rose = Tea.create!(
   size: "S",
   image: "images/rose.png"
 )
-#file16 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/rose.png")
-#rose.photo.attach(io: file16, filename: "rose.png")
+file24 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/rose.png")
+rose.photo.attach(io: file24, filename: "rose.png")
 
 sencha = Tea.create!(
   name: "Sencha",
@@ -215,8 +303,8 @@ sencha = Tea.create!(
   size: "S",
   image: "images/sencha.png"
 )
-#file17 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/sencha.png")
-#sencha.photo.attach(io: file17, filename: "sencha.png")
+file25 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/sencha.png")
+sencha.photo.attach(io: file25, filename: "sencha.png")
 
 vanilla_bean = Tea.create!(
   name: "Vanilla Bean",
@@ -226,5 +314,16 @@ vanilla_bean = Tea.create!(
   size: "S",
   image: "images/vanillabean.png"
 )
-#file18 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/vanillabean.png")
-#vanilla_bean.photo.attach(io: file18, filename: "vanillabean.png")
+file26 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/vanillabean.png")
+vanilla_bean.photo.attach(io: file26, filename: "vanillabean.png")
+
+yerba_mate = Tea.create!(
+  name: "Yerba Mate",
+  category: "Herbal",
+  description: "An herbal tea mix, native to and widely enjoyed throughout southern South America. This unique and popular tea stands proudly on its own in the family, being exceptionally rich with nutrients and sporting a savory grassy taste. Though entirely free of caffeine, it has been known to have a similar, but gentler effect in reinvigorating the body, just as well as the soul. In South American cultures, it is traditionally drank from a gourd through a silver straw called a bombilla, which is commonly passed between friends and family in a show of communal spirit.",
+  price: 15,
+  size: "S",
+  image: "images/yerbamate.png"
+)
+file27 = open("https://looseleaf-tea-seeds.s3.us-west-1.amazonaws.com/yerbamate.png")
+yerba_mate.photo.attach(io: file27, filename: "yerbamate.png")

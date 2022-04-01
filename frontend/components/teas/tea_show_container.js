@@ -9,7 +9,7 @@ const mapStateToProps = (state, ownProps) => {
     currentUser: state.entities.users[state.session.id],
     tea: state.entities.teas[ownProps.match.params.teaId],
     cartItems: Object.values(state.entities.cartItems),
-    reviews: Object.values(state.entities.reviews),
+    reviews: state.entities.reviews
   }
 };
 

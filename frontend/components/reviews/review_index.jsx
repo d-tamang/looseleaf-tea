@@ -58,10 +58,11 @@ class ReviewIndex extends React.Component {
   }
 
   showReviews() {
-    if (this.props.reviews.length === 0) {
+    let reviews = Object.values(this.props.reviews);
+    if (reviews.length === 0) {
       return <div id="no-reviews">Be the first to leave a tea-view!</div>
     } else {
-      return this.props.reviews.map(review => {
+      return reviews.map(review => {
         const date = new Date(Date.parse(review.createdAt));
         return <div key={review.id + Math.random()} className="posted-reviews">
           {this.showStars(review)}
@@ -69,7 +70,7 @@ class ReviewIndex extends React.Component {
           <div id="posted-review-body">{review.body}</div>
           <div id="posted-review-name">{review.name}</div>
           <div>{date.toDateString().slice(4)}</div>
-          {this.props.currentUser.id === review.userId ? <div>
+          {this.props.currentUser && this.props.currentUser.id === review.userId ? <div>
             <Link to={`/teas/${this.props.tea.id}/reviews/${review.id}/edit`}><button className="review-icon-box"><img className="review-button-icon" src="images/editicon.png" /></button></Link>
             <button className="review-icon-box" onClick={(e) => this.removeReview(e, review.id)}><img className="review-button-icon" src="images/deleteicon.png" /></button>
           </div> : <div id="hidden-review-div"></div>}

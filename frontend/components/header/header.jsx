@@ -26,20 +26,17 @@ class Header extends React.Component {
     document.getElementById("nav-search-id").style.width = "0";
   }
 
-  showQuantity() {
-    let quantity = 0;
-    for (let cartItem of this.props.cartItems) {
-      quantity += cartItem.quantity;
-    }
-    return quantity;
-  }
-
   showCartNav() {
-    if (!this.props.cartItems.length) {
-      return <div className="nav-link" onClick={this.openCart}><img id="cart-icon" src="images/cart.png" />Cart</div>
-    } else {
-      return <div className="nav-link" onClick={this.openCart}><img id="cart-icon" src="images/cart.png" />Cart - {this.showQuantity()}</div>
+    if (this.props.currentUser && this.props.cartItems.length) {
+      let quantity = 0;
+      for (let cartItem of this.props.cartItems) {
+        if (cartItem.userId === this.props.currentUser.id) {
+          quantity += cartItem.quantity;
+          return <div className="nav-link" onClick={this.openCart}><img id="cart-icon" src="images/cart.png" />Cart - {quantity}</div>
+        }
+      }
     }
+    return <div className="nav-link" onClick={this.openCart}><img id="cart-icon" src="images/cart.png" />Cart</div>
   }
 
   render() {

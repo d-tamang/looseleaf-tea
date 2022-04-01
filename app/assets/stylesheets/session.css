@@ -55,3 +55,7 @@
 .session-errors {
   text-align: center;
 }
+
+.form-switch:hover {
+  color: rgb(160, 160, 160);
+}

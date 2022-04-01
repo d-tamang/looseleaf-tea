@@ -11,7 +11,7 @@ const mapStateToProps = (state, ownProps) => {
       body: "",
       rating: 0,
       userId: state.session.id,
-      teaId: parseInt(ownProps.match.params.id)
+      teaId: parseInt(ownProps.match.params.teaId)
     },
   }
 };

@@ -61,9 +61,9 @@ class ReviewIndex extends React.Component {
     if (this.props.reviews.length === 0) {
       return <div id="no-reviews">Be the first to leave a tea-view!</div>
     } else {
-      return this.props.reviews.map((review, i) => {
+      return this.props.reviews.map(review => {
         const date = new Date(Date.parse(review.createdAt));
-        return <div key={review.rating + i} className="posted-reviews">
+        return <div key={review.id + Math.random()} className="posted-reviews">
           {this.showStars(review)}
           <div id="posted-review-title">{review.title}</div>
           <div id="posted-review-body">{review.body}</div>

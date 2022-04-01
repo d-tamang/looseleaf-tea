@@ -52,7 +52,7 @@ class SignupForm extends React.Component {
         <div id="session-text">*Required Fields</div>
         <div className="session-errors">{this.renderErrors()}</div>
         <div className="session-question">Already have an account?</div>
-        <div><Link to="/account/login" onClick={this.clearErrors}>Sign In</Link></div>
+        <div className="form-switch"><Link to="/account/login" onClick={this.clearErrors}>Sign In</Link></div>
       </div>
     )
   }

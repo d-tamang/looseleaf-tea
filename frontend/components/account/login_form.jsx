@@ -54,7 +54,7 @@ class LoginForm extends React.Component {
         <div><button id="demo-button" onClick={this.demoLogin}>DEMO LOGIN</button></div>
         <div className="session-errors">{this.renderErrors()}</div>
         <div className="session-question">Don't have an account?</div>
-        <div><Link to="/account/register" onClick={this.clearErrors}>Create Account</Link></div>
+        <div className="form-switch"><Link to="/account/register" onClick={this.clearErrors}>Create Account</Link></div>
       </div>
     )
   }

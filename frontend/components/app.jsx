@@ -7,12 +7,12 @@ import GreenTeasContainer from "./teas/green/greenteas_container";
 import HerbalTeasContainer from "./teas/herbal/herbalteas_container"
 import TeaShowContainer from "./teas/tea_show_container";
 import TeasIndexContainer from "./teas/all_teas/teas_index_container";
-import MenuShow from "./menu_show";
+import Menu from "./static/menu";
 import AccountShowContainer from "./account/account_show_container";
 import LoginFormContainer from "../components/account/login_form_container";
 import SignupFormContainer from "../components/account/signup_form_container";
-import HomePage from "./homepage";
-import Footer from "./footer";
+import HomePage from "./static/homepage";
+import Footer from "./static/footer";
 import EditReviewContainer from '../components/reviews/edit_review_container';
 
 const App = () => (
@@ -23,13 +23,13 @@ const App = () => (
       <Route exact path="/teas/green" component={GreenTeasContainer} />
       <Route exact path="/teas/herbal" component={HerbalTeasContainer} />
       <Route exact path="/teas/:teaId" component={TeaShowContainer} />
-      <ProtectedRoute path="/teas/:id/reviews/:reviewId/edit" component={EditReviewContainer} />
+      <ProtectedRoute path="/teas/:teaId/reviews/:reviewId/edit" component={EditReviewContainer} />
       <Route exact path="/teas" component={TeasIndexContainer} />
-      <Route exact path="/menu" render={MenuShow} />
+      <Route exact path="/menu" render={Menu} />
       <ProtectedRoute exact path="/account" component={AccountShowContainer} />
       <AuthRoute exact path="/account/login" component={LoginFormContainer} />
       <AuthRoute exact path="/account/register" component={SignupFormContainer} />
-      <Route exact path="/" component={HomePage} />
+      <Route exact path="/" render={HomePage} />
       <Redirect to="/" />
     </Switch>
     <Footer />

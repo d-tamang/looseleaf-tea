@@ -7,7 +7,11 @@ const reviewsReducer = (state = {}, action) => {
   
   switch (action.type) {
     case RECEIVE_TEA:
-      return action.payload.reviews;
+      if (action.payload.reviews) {
+        return action.payload.reviews;
+      } else {
+        return newState;
+      }
     case RECEIVE_REVIEW:
       newState[action.review.id] = action.review;
       return newState;

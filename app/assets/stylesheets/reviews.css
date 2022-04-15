@@ -54,12 +54,13 @@
 }
 
 .review-form-button {
-  width: 410px;
+  width: 405px;
   border-radius: 12px;
   padding: 10px 10px;
   background-color: #835836;
   color: #fff;
   border-style: hidden;
+  margin-top: 5px;
 }
 
 .review-form div {
@@ -115,4 +116,15 @@ textarea::placeholder {
   width: 20px;
   height: 20px;
   padding-right: 2px;
+}
+
+.select-rating {
+  padding-right: 10px;
+  font-size: 18px;
+}
+
+.review-errors {
+  padding: 4px;
+  text-align: center;
+  font-family: "Inter-Regular";
 }

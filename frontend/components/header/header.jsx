@@ -28,13 +28,13 @@ class Header extends React.Component {
 
   showCartNav() {
     if (this.props.currentUser && this.props.cartItems.length) {
-      let quantity = 0;
+      let numItems = 0;
       for (let cartItem of this.props.cartItems) {
         if (cartItem.userId === this.props.currentUser.id) {
-          quantity += cartItem.quantity;
-          return <div className="nav-link" onClick={this.openCart}><img id="cart-icon" src="images/cart.png" />Cart - {quantity}</div>
+          numItems += cartItem.quantity;
         }
       }
+      return <div className="nav-link" onClick={this.openCart}><img id="cart-icon" src="images/cart.png" />Cart - {numItems}</div>
     }
     return <div className="nav-link" onClick={this.openCart}><img id="cart-icon" src="images/cart.png" />Cart</div>
   }

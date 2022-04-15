@@ -29,16 +29,14 @@ class SearchBar extends React.Component {
   render() {
     let filteredResults;
       if (this.state.results.length > 0) {
-        filteredResults = this.state.results.map(tea => (
-          <div className="search-results-box">
+        filteredResults = this.state.results.map((tea, i) => (
+          <div key={i} className="search-results-box">
             <div><Link to={`/teas/${tea.id}`}><img id="search-tea-img" src={tea.image}/></Link></div>
             <div id="search-tea-name">{tea.name}</div>
           </div>
         ))
       } else if (this.state.searchField !== "") {
-        filteredResults = (
-          <div id="no-results">Your search for "{this.state.searchField}" did not yield any results.</div>
-        )
+        filteredResults = <div id="no-results">Your search for "{this.state.searchField}" did not yield any results.</div>
       }
 
     return (

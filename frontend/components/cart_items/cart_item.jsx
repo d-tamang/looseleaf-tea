@@ -8,7 +8,6 @@ class CartItem extends React.Component {
 
   componentDidMount() {
     this.props.fetchCartItems();
-    this.props.fetchTeas();
   }
 
   incrementQuantity(e, cartItem) {

@@ -19,19 +19,19 @@ const receiveErrors = errors => ({
   errors
 });
 
-export const clearErrors = (errors) => ({
+export const clearErrors = errors => ({
   type: CLEAR_SESSION_ERRORS,
   errors
 });
 
 export const signup = user => dispatch => (
   APIUtil.signup(user).then(user => (dispatch(receiveCurrentUser(user))),
-  err => (dispatch(receiveErrors(err.responseJSON))))
+  errors => (dispatch(receiveErrors(errors.responseJSON))))
 );
 
 export const login = user => dispatch => (
   APIUtil.login(user).then(user => (dispatch(receiveCurrentUser(user))),
-  err => (dispatch(receiveErrors(err.responseJSON))))
+  errors => (dispatch(receiveErrors(errors.responseJSON))))
 );
 
 export const logout = () => dispatch => (

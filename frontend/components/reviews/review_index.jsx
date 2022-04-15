@@ -58,7 +58,12 @@ class ReviewIndex extends React.Component {
   }
 
   showReviews() {
-    let reviews = Object.values(this.props.reviews);
+    let reviews = [];
+    for (let review of Object.values(this.props.reviews)) {
+      if (review.teaId === this.props.tea.id) {
+        reviews.push(review);
+      }
+    }
     if (reviews.length === 0) {
       return <div id="no-reviews">Be the first to leave a tea-view!</div>
     } else {
@@ -90,6 +95,8 @@ class ReviewIndex extends React.Component {
               currentUser={this.props.currentUser}
               tea={this.props.tea}
               createReview={this.props.createReview}
+              errors={this.props.errors}
+              clearErrors={this.props.clearErrors}
             />
           </div>
           <div>{this.showReviews()}</div>

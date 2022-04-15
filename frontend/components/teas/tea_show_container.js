@@ -2,14 +2,15 @@ import { connect } from 'react-redux';
 import { fetchTea } from '../../actions/tea_actions';
 import TeaItemShow from './tea_item_show';
 import { fetchCartItems, createCartItem, updateCartItem } from '../../actions/cart_item_actions';
-import { createReview, editReview, deleteReview } from '../../actions/review_actions';
+import { createReview, editReview, deleteReview, clearErrors } from '../../actions/review_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
     currentUser: state.entities.users[state.session.id],
     tea: state.entities.teas[ownProps.match.params.teaId],
     cartItems: Object.values(state.entities.cartItems),
-    reviews: state.entities.reviews
+    reviews: state.entities.reviews,
+    errors: state.errors.review
   }
 };
 
@@ -21,7 +22,8 @@ const mapDispatchToProps = dispatch => {
     updateCartItem: (cartItem, quantity) => dispatch(updateCartItem(cartItem, quantity)),
     createReview: review => dispatch(createReview(review)),
     editReview: review => dispatch(editReview(review)),
-    deleteReview: reviewId => dispatch(deleteReview(reviewId))
+    deleteReview: reviewId => dispatch(deleteReview(reviewId)),
+    clearErrors: () => dispatch(clearErrors())
   }
 };
 

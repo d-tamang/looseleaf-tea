@@ -100,6 +100,8 @@ class TeaItemShow extends React.Component {
           editReview={this.props.editReview}
           deleteReview={this.props.deleteReview}
           reviews={this.props.reviews}
+          errors={this.props.errors}
+          clearErrors={this.props.clearErrors}
         />
       </div>
     )

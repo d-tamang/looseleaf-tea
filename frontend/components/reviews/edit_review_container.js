@@ -13,6 +13,7 @@ const mapStateToProps = (state, ownProps) => {
       userId: state.session.id,
       teaId: parseInt(ownProps.match.params.teaId)
     },
+    errors: state.errors.review
   }
 };
 

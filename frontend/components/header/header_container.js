@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { fetchTeas } from '../../util/tea_api_util';
 import Header from './header';
 
 const mapStateToProps = state => {
@@ -9,4 +10,10 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps, null)(Header);
+const mapDispatchToProps = dispatch => {
+  return {
+    fetchTeas: () => dispatch(fetchTeas())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

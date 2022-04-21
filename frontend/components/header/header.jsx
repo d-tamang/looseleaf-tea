@@ -4,12 +4,8 @@ import CartItemContainer from "../cart_items/cart_item_container";
 import SearchBar from './searchbar';
 
 class Header extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   openCart() {
-    document.getElementById("nav-cart-id").style.width = "45%";
+    document.getElementById("nav-cart-id").style.width = "50%";
   }
 
   closeCart(e) {
@@ -18,7 +14,7 @@ class Header extends React.Component {
   }
 
   openSearch() {
-    document.getElementById("nav-search-id").style.width = "45%";
+    document.getElementById("nav-search-id").style.width = "50%";
   }
 
   closeSearch(e) {
@@ -65,7 +61,7 @@ class Header extends React.Component {
         <div className="nav-search" id="nav-search-id">
           <div className="inner-search">
             <button id="close-search-x" onClick={this.closeSearch}><img id="close-search-icon" src="images/closeicon.png" /></button>
-            <SearchBar teas={this.props.teas} />
+            <SearchBar teas={this.props.teas} fetchTeas={this.props.fetchTeas}/>
           </div>
         </div>
         <div className="nav-cart" id="nav-cart-id">

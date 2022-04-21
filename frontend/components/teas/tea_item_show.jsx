@@ -60,12 +60,12 @@ class TeaItemShow extends React.Component {
       if (cartItem.teaId === this.props.tea.id && cartItem.userId === this.props.currentUser.id && cartItem.size === this.state.size) {
         let newQuantity = this.state.quantity + cartItem.quantity;
         this.props.updateCartItem(cartItem, newQuantity);
-        document.getElementById("nav-cart-id").style.width = "45%";
+        document.getElementById("nav-cart-id").style.width = "50%";
         return;
       }
     }
     this.props.createCartItem(this.props.currentUser.id, this.props.tea.id, this.state.quantity, this.state.price, this.state.size);
-    document.getElementById("nav-cart-id").style.width = "45%";
+    document.getElementById("nav-cart-id").style.width = "50%";
   }
 
   render() {

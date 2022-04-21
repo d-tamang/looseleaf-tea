@@ -3,10 +3,6 @@ import ReviewForm from './review_form';
 import { Link } from 'react-router-dom';
 
 class ReviewIndex extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   removeReview(e, reviewId) {
     e.preventDefault()
     this.props.deleteReview(reviewId);

@@ -2,10 +2,6 @@ import React from "react";
 import TeaItem from "../tea_item"
 
 class HerbalTeasIndex extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {
     window.scrollTo(0, 0);
     this.props.fetchTeas();

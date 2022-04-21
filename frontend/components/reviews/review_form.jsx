@@ -23,8 +23,8 @@ class ReviewForm extends React.Component {
     if (!this.props.currentUser) return this.props.history.push('/account/login');
     this.props.createReview(this.state);
     this.setState({
-      title: this.state.title? this.state.title : "",
-      body: this.state.body? this.state.body : ""
+      title: "",
+      body: ""
     })
   }
 

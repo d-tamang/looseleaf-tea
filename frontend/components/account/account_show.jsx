@@ -1,10 +1,6 @@
 import React from "react";
 
 class AccountShow extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     window.scrollTo(0, 0);
     return (

@@ -10,6 +10,10 @@ class SearchBar extends React.Component {
     }
   }
 
+  componentDidMount() {
+    this.props.fetchTeas();
+  }
+
   handleChange(e) {
     this.setState({ searchField: e.target.value });
     if (e.target.value === '') {

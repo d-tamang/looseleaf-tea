@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { fetchTeas } from '../../util/tea_api_util';
+import { fetchTeas } from '../../actions/tea_actions';
 import Header from './header';
 
 const mapStateToProps = state => {

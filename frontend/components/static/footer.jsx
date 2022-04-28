@@ -11,9 +11,9 @@ const Footer = () => (
     <div className="my-links">
       <div id="created-by">Inspired by Leland Tea, created by Disnee</div>
       <div className="link-icons">
-        <a href="https://linkedin.com/in/disneetamang"><img className="link-icon" src="images/linkedinicon.png" /></a>
-        <a href="https://github.com/d-tamang"><img className="link-icon" src="images/githubicon.png" /></a>
-        <a href="mailto: d.tamang48@yahoo.com"><img className="link-icon" src="images/mailicon.png"/></a>
+        <a href="https://linkedin.com/in/disneetamang" target="_blank" rel="noopener noreferrer"><img className="link-icon" src="images/linkedinicon.png" /></a>
+        <a href="https://github.com/d-tamang" target="_blank" rel="noopener noreferrer"><img className="link-icon" src="images/githubicon.png" /></a>
+        <a href="mailto: d.tamang48@yahoo.com" target="_blank" rel="noopener noreferrer"><img className="link-icon" src="images/mailicon.png"/></a>
       </div>
     </div>
   </div>

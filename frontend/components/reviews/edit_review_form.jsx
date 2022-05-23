@@ -3,11 +3,26 @@ import React from 'react';
 class EditReviewForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = this.props.review;
+    this.state = {
+      id: this.props.review.id,
+      title: this.props.review.title,
+      body: this.props.review.body,
+      rating: this.props.review.rating,
+      userId: this.props.review.userId,
+      teaId: this.props.review.teaId
+    // review: {
+    //   id: parseInt(ownProps.match.params.reviewId),
+    //   title: "",
+    //   body: "",
+    //   rating: 0,
+    //   userId: state.session.id,
+    //   teaId: parseInt(ownProps.match.params.teaId)
+    // },
+    }
   }
 
   componentDidMount() {
-    this.props.fetchReview(this.state.id);
+    this.props.fetchReview(this.props.review.id);
   }
 
   update(field) {
@@ -45,8 +60,8 @@ class EditReviewForm extends React.Component {
                 <option type="radio" value="5" onChange={this.update("rating")}>5</option>
               </select>
             </div>
-            <div className="review-title-box"><textarea className="review-form-title" type="text" value={this.state.title} onChange={this.update("title")} placeholder="Title"></textarea></div>
-            <div className="review-body-box"><textarea className="review-form-body" value={this.state.body} onChange={this.update("body")} placeholder="Write review here"></textarea></div>
+            <div className="review-title-box"><textarea className="review-form-title" type="text" value={this.state.title} onChange={this.update("title")}></textarea></div>
+            <div className="review-body-box"><textarea className="review-form-body" value={this.state.body} onChange={this.update("body")}></textarea></div>
             <div><button className="review-form-button">EDIT REVIEW</button></div>
             {this.renderErrors()}
           </form>

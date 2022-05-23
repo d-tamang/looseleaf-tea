@@ -5,14 +5,15 @@ import EditReviewForm from './edit_review_form';
 const mapStateToProps = (state, ownProps) => {
   return {
     currentUser: state.entities.users[state.session.id],
-    review: {
-      id: parseInt(ownProps.match.params.reviewId),
-      title: "",
-      body: "",
-      rating: 0,
-      userId: state.session.id,
-      teaId: parseInt(ownProps.match.params.teaId)
-    },
+    // review: {
+    //   id: parseInt(ownProps.match.params.reviewId),
+    //   title: "",
+    //   body: "",
+    //   rating: 0,
+    //   userId: state.session.id,
+    //   teaId: parseInt(ownProps.match.params.teaId)
+    // },
+    review: state.entities.reviews[ownProps.match.params.reviewId],
     errors: state.errors.review
   }
 };

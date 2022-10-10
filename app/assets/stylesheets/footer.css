@@ -4,7 +4,7 @@
 
 .contact-info {
   text-align: center;
-  padding: 45px;
+  padding: 35px;
 }
 
 .contact-info > p {
@@ -28,8 +28,8 @@
 }
 
 .link-icon {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   padding-left: 5px;
 }
 

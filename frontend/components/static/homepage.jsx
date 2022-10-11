@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const HomePage = () => {
   window.scrollTo(0, 0);
-  
+
   return (
     <div className="homepage">
       <div className="first-component-box">

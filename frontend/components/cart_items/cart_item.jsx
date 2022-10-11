@@ -39,11 +39,11 @@ class CartItem extends React.Component {
           <div>{`$${cartItem.price}.00`}</div>
           <div>
             <button className="cart-quantity-btn" onClick={(e) => this.decrementQuantity(e, cartItem)}>
-              <img className="cart-quantity-icon" src="images/minusicon.png"/>
+              <img className="cart-quantity-icon" src="images/minusicon.png" />
             </button>
             {cartItem.quantity}
             <button className="cart-quantity-btn" onClick={(e) => this.incrementQuantity(e, cartItem)}>
-              <img className="cart-quantity-icon" src="images/plusicon.png"/>
+              <img className="cart-quantity-icon" src="images/plusicon.png" />
             </button>
           </div>
           <div id="hidden-subtotal">{this.subtotal += cartItem.price * cartItem.quantity}</div>
@@ -88,7 +88,7 @@ class CartItem extends React.Component {
           </div>
           <div className="checkout-modal">
             <div className="modal-content">
-              <button id="checkout-button" onClick={(e) => this.closeModal(e)}><img id="modal-x-icon" src="images/closeicon.png"/></button>
+              <button id="checkout-button" onClick={(e) => this.closeModal(e)}><img id="modal-x-icon" src="images/closeicon.png" /></button>
               <p className="modal-text">Thanks for browsing LooseLeaf Tea Co!</p>
               <br />
               <p>All teas feaured are real and can be purchased at site muse,</p>
@@ -102,7 +102,6 @@ class CartItem extends React.Component {
       )
     }
   }
-
 }
 
 export default CartItem;

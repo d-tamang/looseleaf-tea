@@ -10,14 +10,14 @@ class EditReviewForm extends React.Component {
       rating: this.props.review.rating,
       userId: this.props.review.userId,
       teaId: this.props.review.teaId
-    // review: {
-    //   id: parseInt(ownProps.match.params.reviewId),
-    //   title: "",
-    //   body: "",
-    //   rating: 0,
-    //   userId: state.session.id,
-    //   teaId: parseInt(ownProps.match.params.teaId)
-    // },
+      // review: {
+      //   id: parseInt(ownProps.match.params.reviewId),
+      //   title: "",
+      //   body: "",
+      //   rating: 0,
+      //   userId: state.session.id,
+      //   teaId: parseInt(ownProps.match.params.teaId)
+      // },
     }
   }
 
@@ -31,7 +31,7 @@ class EditReviewForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.editReview(this.state).then(() => {this.props.history.push(`/teas/${this.props.review.teaId}`)});
+    this.props.editReview(this.state).then(() => { this.props.history.push(`/teas/${this.props.review.teaId}`) });
   }
 
   renderErrors() {
@@ -51,7 +51,7 @@ class EditReviewForm extends React.Component {
         <div className="review-form">
           <form onSubmit={(e) => this.handleSubmit(e)}>
             <div>
-            <span className="select-rating">Select Rating</span>
+              <span className="select-rating">Select Rating</span>
               <select onChange={this.update("rating")} >
                 <option type="radio" value="1" onChange={this.update("rating")}>1</option>
                 <option type="radio" value="2" onChange={this.update("rating")}>2</option>

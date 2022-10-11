@@ -2,7 +2,7 @@ import React from "react";
 
 const Menu = () => {
   window.scrollTo(0, 0);
-  
+
   return (
     <div className="menu">
       <div id="menu-title">Afternoon Tea Service Menu</div>

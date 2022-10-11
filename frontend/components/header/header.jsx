@@ -61,7 +61,7 @@ class Header extends React.Component {
         <div className="nav-search" id="nav-search-id">
           <div className="inner-search">
             <button id="close-search-x" onClick={this.closeSearch}><img id="close-search-icon" src="images/closeicon.png" /></button>
-            <SearchBar teas={this.props.teas} fetchTeas={this.props.fetchTeas}/>
+            <SearchBar teas={this.props.teas} fetchTeas={this.props.fetchTeas} />
           </div>
         </div>
         <div className="nav-cart" id="nav-cart-id">
